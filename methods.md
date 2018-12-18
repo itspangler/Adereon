@@ -14,7 +14,7 @@
 
 ## Overview
 
-The three continents in the known world of Adereon have, to this day, never been properly mapped.
+The three continents in the known world of Adereon have, to this day, never been mapped in a geographic information system.
 
 In this document, I'll detail some of the key considerations and techniques that went into making a spatial database -- and a few maps to go along with it -- of my friend Nate's homebrewed Dungeons & Dragons universe.  Just a note: this map was creatively co-authored with my friend Nate, who is the brains behind most of the fantasy stuff. As such, I will sometimes refer to him in the mapmaking process.
 
@@ -26,10 +26,12 @@ Nate and I established that the size of one continent in Adereon was roughly equ
 
 There is also a GSC available for the moon -- GCS_Moon_2000 -- and even a few projections. Great! So this is what I ran with when selecting a coordinate system.
 
-I suppose what I am doing, then, could be considered [selenographic mapping](https://en.wikipedia.org/wiki/Selenographic_coordinates).
-
-In order to familiarize myself with the coordinate system and make sure it worked, I downloaded some derived shapefiles of different features on Earth's moon from Washington University in St. Louis's [Lunar Orbital Data Explorer](https://ode.rsl.wustl.edu/mars/coverage/ODE_Moon_shapefile.html).
+I suppose what I am doing, then, could be considered [selenographic mapping](https://en.wikipedia.org/wiki/Selenographic_coordinates). Super!
 
 ## Georeferencing
 
-The next step was to
+With a coordinate reference system selected, the next step was to create the actual data. The original data can be found here: _adereon-topo-map.jpg_. 
+
+In order to familiarize myself with the coordinate system and make sure it worked, I downloaded some derived shapefiles of different features on Earth's moon from Washington University in St. Louis's [Lunar Orbital Data Explorer](https://ode.rsl.wustl.edu/mars/coverage/ODE_Moon_shapefile.html).
+
+I

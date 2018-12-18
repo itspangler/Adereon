@@ -30,7 +30,7 @@ I suppose what I am doing, then, could be considered [selenographic mapping](htt
 
 ## Georeferencing
 
-With a coordinate reference system selected, the next step was to create the actual data. The original data can be found [here](adereon-topo-map.jpg). 
+With a coordinate reference system selected, the next step was to create the actual data. The original data can be found [here](https://github.com/itspangler/Adereon/blob/master/original_adereon_maps/adereon-topo-map.jpg). 
 
 In order to familiarize myself with the coordinate system and make sure it worked, I downloaded some derived shapefiles of different features on Earth's moon from Washington University in St. Louis's [Lunar Orbital Data Explorer](https://ode.rsl.wustl.edu/mars/coverage/ODE_Moon_shapefile.html).
 

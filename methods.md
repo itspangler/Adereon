@@ -8,7 +8,9 @@
   - [Table of Contents](#table-of-contents)
   - [Overview](#overview)
   - [Coordinate System and Projection](#coordinate-system-and-projection)
-  - [Georeferencing](#georeferencing)
+  - [Data Creation](#data-creation)
+    - [Contextualizing](#contextualizing)
+    - [Georeferencing](#georeferencing)
 
 <!-- /TOC -->
 
@@ -28,10 +30,16 @@ There is also a GSC available for the moon -- GCS_Moon_2000 -- and even a few pr
 
 I suppose what I am doing, then, could be considered [selenographic mapping](https://en.wikipedia.org/wiki/Selenographic_coordinates). Super!
 
-## Georeferencing
+## Data Creation
 
-With a coordinate reference system selected, the next step was to create the actual data. The original data can be found [here](https://github.com/itspangler/Adereon/blob/master/original_adereon_maps/adereon-topo-map.jpg). 
+With a coordinate reference system selected, the next step was data creation. Here, I break down my process of data creation in a few steps.
 
-In order to familiarize myself with the coordinate system and make sure it worked, I downloaded some derived shapefiles of different features on Earth's moon from Washington University in St. Louis's [Lunar Orbital Data Explorer](https://ode.rsl.wustl.edu/mars/coverage/ODE_Moon_shapefile.html).
+### Contextualizing
 
-I
+The original "data" can be found [here](https://github.com/itspangler/Adereon/blob/master/original_adereon_maps/adereon-topo-map.jpg). We might think of this data in the same way we would treat an old map whose entire features needed to be digitized.
+
+In order to familiarize myself with the Moon's coordinate system and make sure it worked, I downloaded some shapefiles of different features on Earth's moon from the [Lunar Reconnaissance Orbiter Camera](http://lroc.sese.asu.edu/about), or LROC. Washington University in St. Louis's [Lunar Orbital Data Explorer](https://ode.rsl.wustl.edu/mars/coverage/ODE_Moon_shapefile.html) also has interesting lunar data, but it was much less useful for my purposes.
+
+Specifically, I downloaded the the line  feature ["Wrinkle Ridges"](http://wms.lroc.asu.edu/lroc/view_rdr/SHAPEFILE_WRINKLE_RIDGES) point feature ["Anthropogenic Features"](http://wms.lroc.asu.edu/lroc/view_rdr/SHAPEFILE_ANTHROPOGENIC_OBJECTS) and .
+
+### Georeferencing

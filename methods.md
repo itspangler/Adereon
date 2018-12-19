@@ -58,4 +58,4 @@ On to georeferencing!
 
 ### Georeferencing
 
-Replicating the instructions from Lesson 6 made this section rather simple.
+Replicating the instructions from Lesson 6 made this section rather simple. The file _adereon-topo-map.jpg_, which is the original map in Figure 01 drawn by Nate, is an unreferenced image that has no coordinate information with which a GIS can place size or location (essentially the same as _sidewalk.jpg_ from Lesson 6). As such, I imported _adereon-topo-map.jpg_ into the Georeferencer in the IAU Moon 2000 Geographic Coordinate System

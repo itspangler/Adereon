@@ -19,7 +19,7 @@
   </projectCrs>
   <layer-tree-group>
     <customproperties/>
-    <layer-tree-layer id="ANTHROPOGENIC_OBJECTS_180_c26bdb07_da1e_413a_8eb7_5a52b0df7b00" checked="Qt::Checked" name="ANTHROPOGENIC_OBJECTS_180" source="/vsizip/../adereon-data/ANTHROPOGENIC_OBJECTS_180.ZIP" expanded="1" providerKey="ogr">
+    <layer-tree-layer id="ANTHROPOGENIC_OBJECTS_180_c26bdb07_da1e_413a_8eb7_5a52b0df7b00" checked="Qt::Checked" name="ANTHROPOGENIC_OBJECTS_180" source="/vsizip/../adereon-data/ANTHROPOGENIC_OBJECTS_180.ZIP|layerid=0|subset=&quot;SHORT_NAME&quot; = 'Luna 17' OR &quot;SHORT_NAME&quot; = 'Luna 21'" expanded="1" providerKey="ogr">
       <customproperties/>
     </layer-tree-layer>
     <layer-tree-layer id="WRINKLE_RIDGES_180_dd08ecd8_4803_4750_b98e_6cf80c0d798d" checked="Qt::Checked" name="WRINKLE_RIDGES_180" source="../adereon-data/WRINKLE_RIDGES_180/WRINKLE_RIDGES_180.SHP" expanded="1" providerKey="ogr">
@@ -40,10 +40,10 @@
   <mapcanvas name="theMapCanvas" annotationsVisible="1">
     <units>degrees</units>
     <extent>
-      <xmin>-216.70187574412440767</xmin>
-      <ymin>-202.48525398446045642</ymin>
-      <xmax>516.59941057873709269</xmax>
-      <ymax>158.39439269489108142</ymax>
+      <xmin>-64.71961330961094916</xmin>
+      <ymin>0.38695402901064568</ymin>
+      <xmax>59.8056252129220951</xmax>
+      <ymax>23.68595563927284076</ymax>
     </extent>
     <rotation>0</rotation>
     <destinationsrs>
@@ -75,16 +75,27 @@
   </legend>
   <mapViewDocks/>
   <mapViewDocks3D/>
+  <mapcanvas name="georefCanvas" annotationsVisible="1">
+    <units>unknown</units>
+    <extent>
+      <xmin>0</xmin>
+      <ymin>-805</ymin>
+      <xmax>1024</xmax>
+      <ymax>0</ymax>
+    </extent>
+    <rotation>0</rotation>
+    <rendermaptile>0</rendermaptile>
+  </mapcanvas>
   <projectlayers>
     <maplayer autoRefreshTime="0" geometry="Point" styleCategories="AllStyleCategories" simplifyMaxScale="1" labelsEnabled="0" readOnly="0" refreshOnNotifyEnabled="0" simplifyDrawingTol="1" hasScaleBasedVisibilityFlag="0" simplifyDrawingHints="1" simplifyAlgorithm="0" autoRefreshEnabled="0" refreshOnNotifyMessage="" type="vector" simplifyLocal="1" minScale="1e+8" maxScale="0">
       <extent>
-        <xmin>-93.24939999999999429</xmin>
-        <ymin>-40.98120000000000118</ymin>
-        <xmax>62.21289999999999765</xmax>
-        <ymax>75.65080000000000382</ymax>
+        <xmin>-35.00162999999999869</xmin>
+        <ymin>25.9994000000000014</ymin>
+        <xmax>30.40759999999999863</xmax>
+        <ymax>38.23763999999999896</ymax>
       </extent>
       <id>ANTHROPOGENIC_OBJECTS_180_c26bdb07_da1e_413a_8eb7_5a52b0df7b00</id>
-      <datasource>/vsizip/../adereon-data/ANTHROPOGENIC_OBJECTS_180.ZIP</datasource>
+      <datasource>/vsizip/../adereon-data/ANTHROPOGENIC_OBJECTS_180.ZIP|layerid=0|subset="SHORT_NAME" = 'Luna 17' OR "SHORT_NAME" = 'Luna 21'</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -175,7 +186,11 @@
         <rotation/>
         <sizescale/>
       </renderer-v2>
-      <customproperties/>
+      <customproperties>
+        <property key="dualview/previewExpressions">
+          <value>"OID_"</value>
+        </property>
+      </customproperties>
       <blendMode>0</blendMode>
       <featureBlendMode>0</featureBlendMode>
       <layerOpacity>1</layerOpacity>
@@ -326,8 +341,107 @@
       <editable/>
       <labelOnTop/>
       <widgets/>
-      <previewExpression></previewExpression>
+      <previewExpression>"OID_"</previewExpression>
       <mapTip></mapTip>
+    </maplayer>
+    <maplayer autoRefreshTime="0" styleCategories="AllStyleCategories" refreshOnNotifyEnabled="0" hasScaleBasedVisibilityFlag="0" autoRefreshEnabled="0" refreshOnNotifyMessage="" type="raster" minScale="1e+8" maxScale="0">
+      <extent>
+        <xmin>0</xmin>
+        <ymin>-805</ymin>
+        <xmax>1024</xmax>
+        <ymax>0</ymax>
+      </extent>
+      <id>Raster_34d891f4_0d1e_4554_af49_ee0cd019f29d</id>
+      <datasource>./original_adereon_maps/adereon-topo-map.jpg</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>Raster</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=longlat +a=1737400 +b=1737400 +no_defs</proj4>
+          <srsid>26842</srsid>
+          <srid>200030100</srid>
+          <authid>IAU2000:30100</authid>
+          <description>Moon 2000</description>
+          <projectionacronym>longlat</projectionacronym>
+          <ellipsoidacronym>Moon2000</ellipsoidacronym>
+          <geographicflag>true</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <resourceMetadata>
+        <identifier></identifier>
+        <parentidentifier></parentidentifier>
+        <language></language>
+        <type></type>
+        <title></title>
+        <abstract></abstract>
+        <links/>
+        <fees></fees>
+        <encoding></encoding>
+        <crs>
+          <spatialrefsys>
+            <proj4></proj4>
+            <srsid>0</srsid>
+            <srid>0</srid>
+            <authid></authid>
+            <description></description>
+            <projectionacronym></projectionacronym>
+            <ellipsoidacronym></ellipsoidacronym>
+            <geographicflag>false</geographicflag>
+          </spatialrefsys>
+        </crs>
+        <extent/>
+      </resourceMetadata>
+      <provider>gdal</provider>
+      <noData>
+        <noDataList bandNo="1" useSrcNoData="0"/>
+        <noDataList bandNo="2" useSrcNoData="0"/>
+        <noDataList bandNo="3" useSrcNoData="0"/>
+      </noData>
+      <map-layer-style-manager current="default">
+        <map-layer-style name="default"/>
+      </map-layer-style-manager>
+      <flags>
+        <Identifiable>1</Identifiable>
+        <Removable>1</Removable>
+        <Searchable>1</Searchable>
+      </flags>
+      <customproperties>
+        <property value="Value" key="identify/format"/>
+      </customproperties>
+      <pipe>
+        <rasterrenderer blueBand="3" greenBand="2" opacity="1" alphaBand="-1" type="multibandcolor" redBand="1">
+          <rasterTransparency/>
+          <minMaxOrigin>
+            <limits>MinMax</limits>
+            <extent>WholeRaster</extent>
+            <statAccuracy>Estimated</statAccuracy>
+            <cumulativeCutLower>0.02</cumulativeCutLower>
+            <cumulativeCutUpper>0.98</cumulativeCutUpper>
+            <stdDevFactor>2</stdDevFactor>
+          </minMaxOrigin>
+          <redContrastEnhancement>
+            <minValue>172</minValue>
+            <maxValue>255</maxValue>
+            <algorithm>NoEnhancement</algorithm>
+          </redContrastEnhancement>
+          <greenContrastEnhancement>
+            <minValue>172</minValue>
+            <maxValue>255</maxValue>
+            <algorithm>NoEnhancement</algorithm>
+          </greenContrastEnhancement>
+          <blueContrastEnhancement>
+            <minValue>172</minValue>
+            <maxValue>255</maxValue>
+            <algorithm>NoEnhancement</algorithm>
+          </blueContrastEnhancement>
+        </rasterrenderer>
+        <brightnesscontrast contrast="0" brightness="0"/>
+        <huesaturation colorizeOn="0" colorizeGreen="128" colorizeStrength="100" colorizeBlue="128" grayscaleMode="0" saturation="0" colorizeRed="255"/>
+        <rasterresampler maxOversampling="2"/>
+      </pipe>
+      <blendMode>0</blendMode>
     </maplayer>
     <maplayer autoRefreshTime="0" geometry="Line" styleCategories="AllStyleCategories" simplifyMaxScale="1" labelsEnabled="0" readOnly="0" refreshOnNotifyEnabled="0" simplifyDrawingTol="1" hasScaleBasedVisibilityFlag="0" simplifyDrawingHints="1" simplifyAlgorithm="0" autoRefreshEnabled="0" refreshOnNotifyMessage="" type="vector" simplifyLocal="1" minScale="1e+8" maxScale="0">
       <extent>
@@ -373,7 +487,7 @@
             <description></description>
             <projectionacronym></projectionacronym>
             <ellipsoidacronym></ellipsoidacronym>
-            <geographicflag>true</geographicflag>
+            <geographicflag>false</geographicflag>
           </spatialrefsys>
         </crs>
         <extent/>
@@ -519,8 +633,8 @@
     <layer id="ANTHROPOGENIC_OBJECTS_180_c26bdb07_da1e_413a_8eb7_5a52b0df7b00"/>
   </layerorder>
   <properties>
-    <WMSContactOrganization type="QString"></WMSContactOrganization>
     <WMSRequestDefinedDataSources type="bool">false</WMSRequestDefinedDataSources>
+    <WMSContactOrganization type="QString"></WMSContactOrganization>
     <SpatialRefSys>
       <ProjectionsEnabled type="int">1</ProjectionsEnabled>
     </SpatialRefSys>
@@ -530,12 +644,12 @@
       <DegreeFormat type="QString">MU</DegreeFormat>
     </PositionPrecision>
     <WMSUseLayerIDs type="bool">false</WMSUseLayerIDs>
-    <WMSOnlineResource type="QString"></WMSOnlineResource>
     <WMSPrecision type="QString">8</WMSPrecision>
-    <WMSServiceTitle type="QString"></WMSServiceTitle>
+    <WMSOnlineResource type="QString"></WMSOnlineResource>
     <WMSServiceAbstract type="QString"></WMSServiceAbstract>
-    <WMSContactPerson type="QString"></WMSContactPerson>
+    <WMSServiceTitle type="QString"></WMSServiceTitle>
     <WMSContactMail type="QString"></WMSContactMail>
+    <WMSContactPerson type="QString"></WMSContactPerson>
     <WMSAddWktGeometry type="bool">false</WMSAddWktGeometry>
     <Macros>
       <pythonCode type="QString"></pythonCode>
@@ -559,6 +673,7 @@
       <filterByMap type="bool">false</filterByMap>
     </Legend>
     <WMSServiceCapabilities type="bool">false</WMSServiceCapabilities>
+    <WFSLayers type="QStringList"/>
     <DefaultStyles>
       <Marker type="QString"></Marker>
       <Line type="QString"></Line>
@@ -567,7 +682,6 @@
       <Fill type="QString"></Fill>
       <RandomColors type="bool">true</RandomColors>
     </DefaultStyles>
-    <WFSLayers type="QStringList"/>
     <Gui>
       <SelectionColorBluePart type="int">0</SelectionColorBluePart>
       <CanvasColorBluePart type="int">255</CanvasColorBluePart>

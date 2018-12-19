@@ -19,31 +19,35 @@
   </projectCrs>
   <layer-tree-group>
     <customproperties/>
-    <layer-tree-layer id="ANTHROPOGENIC_OBJECTS_180_c26bdb07_da1e_413a_8eb7_5a52b0df7b00" checked="Qt::Checked" name="ANTHROPOGENIC_OBJECTS_180" source="/vsizip/../adereon-data/ANTHROPOGENIC_OBJECTS_180.ZIP" expanded="1" providerKey="ogr">
+    <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="adereon_topo_map_modified_b773a35c_2f49_443b_86cb_9a00c451cf08" source="../adereon-data/adereon-topo-map_modified.tif" name="adereon-topo-map_modified">
       <customproperties/>
     </layer-tree-layer>
-    <layer-tree-layer id="WRINKLE_RIDGES_180_dd08ecd8_4803_4750_b98e_6cf80c0d798d" checked="Qt::Checked" name="WRINKLE_RIDGES_180" source="../adereon-data/WRINKLE_RIDGES_180/WRINKLE_RIDGES_180.SHP" expanded="1" providerKey="ogr">
+    <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="ANTHROPOGENIC_OBJECTS_180_c26bdb07_da1e_413a_8eb7_5a52b0df7b00" source="/vsizip/../adereon-data/ANTHROPOGENIC_OBJECTS_180.ZIP|layerid=0|subset=&quot;SHORT_NAME&quot; = 'Luna 17' OR &quot;SHORT_NAME&quot; = 'Luna 21'" name="ANTHROPOGENIC_OBJECTS_180">
+      <customproperties/>
+    </layer-tree-layer>
+    <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="WRINKLE_RIDGES_180_dd08ecd8_4803_4750_b98e_6cf80c0d798d" source="../adereon-data/WRINKLE_RIDGES_180/WRINKLE_RIDGES_180.SHP" name="WRINKLE_RIDGES_180">
       <customproperties/>
     </layer-tree-layer>
     <custom-order enabled="0">
       <item>WRINKLE_RIDGES_180_dd08ecd8_4803_4750_b98e_6cf80c0d798d</item>
       <item>ANTHROPOGENIC_OBJECTS_180_c26bdb07_da1e_413a_8eb7_5a52b0df7b00</item>
+      <item>adereon_topo_map_modified_b773a35c_2f49_443b_86cb_9a00c451cf08</item>
     </custom-order>
   </layer-tree-group>
-  <snapping-settings tolerance="5" unit="1" mode="2" type="1" intersection-snapping="0" enabled="0">
+  <snapping-settings type="1" mode="2" unit="1" enabled="0" intersection-snapping="0" tolerance="5">
     <individual-layer-settings>
-      <layer-setting tolerance="5" units="1" id="WRINKLE_RIDGES_180_dd08ecd8_4803_4750_b98e_6cf80c0d798d" type="1" enabled="0"/>
-      <layer-setting tolerance="5" units="1" id="ANTHROPOGENIC_OBJECTS_180_c26bdb07_da1e_413a_8eb7_5a52b0df7b00" type="1" enabled="0"/>
+      <layer-setting type="1" enabled="0" units="1" id="ANTHROPOGENIC_OBJECTS_180_c26bdb07_da1e_413a_8eb7_5a52b0df7b00" tolerance="5"/>
+      <layer-setting type="1" enabled="0" units="1" id="WRINKLE_RIDGES_180_dd08ecd8_4803_4750_b98e_6cf80c0d798d" tolerance="5"/>
     </individual-layer-settings>
   </snapping-settings>
   <relations/>
-  <mapcanvas name="theMapCanvas" annotationsVisible="1">
+  <mapcanvas annotationsVisible="1" name="theMapCanvas">
     <units>degrees</units>
     <extent>
-      <xmin>-154.002137323885961</xmin>
-      <ymin>-60.11224413722416671</ymin>
-      <xmax>194.06314288526669998</xmax>
-      <ymax>72.69493354369058125</ymax>
+      <xmin>-13616.39448781995452009</xmin>
+      <ymin>4162.63681704694499786</ymin>
+      <xmax>11659.03348140586967929</xmax>
+      <ymax>8891.73626662152491917</ymax>
     </extent>
     <rotation>0</rotation>
     <destinationsrs>
@@ -62,12 +66,17 @@
   </mapcanvas>
   <projectModels/>
   <legend updateDrawingOrder="true">
-    <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="ANTHROPOGENIC_OBJECTS_180" showFeatureCount="0">
+    <legendlayer showFeatureCount="0" checked="Qt::Checked" open="true" drawingOrder="-1" name="adereon-topo-map_modified">
+      <filegroup open="true" hidden="false">
+        <legendlayerfile isInOverview="0" visible="1" layerid="adereon_topo_map_modified_b773a35c_2f49_443b_86cb_9a00c451cf08"/>
+      </filegroup>
+    </legendlayer>
+    <legendlayer showFeatureCount="0" checked="Qt::Checked" open="true" drawingOrder="-1" name="ANTHROPOGENIC_OBJECTS_180">
       <filegroup open="true" hidden="false">
         <legendlayerfile isInOverview="0" visible="1" layerid="ANTHROPOGENIC_OBJECTS_180_c26bdb07_da1e_413a_8eb7_5a52b0df7b00"/>
       </filegroup>
     </legendlayer>
-    <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="WRINKLE_RIDGES_180" showFeatureCount="0">
+    <legendlayer showFeatureCount="0" checked="Qt::Checked" open="true" drawingOrder="-1" name="WRINKLE_RIDGES_180">
       <filegroup open="true" hidden="false">
         <legendlayerfile isInOverview="0" visible="1" layerid="WRINKLE_RIDGES_180_dd08ecd8_4803_4750_b98e_6cf80c0d798d"/>
       </filegroup>
@@ -75,16 +84,27 @@
   </legend>
   <mapViewDocks/>
   <mapViewDocks3D/>
+  <mapcanvas annotationsVisible="1" name="georefCanvas">
+    <units>unknown</units>
+    <extent>
+      <xmin>0</xmin>
+      <ymin>-805</ymin>
+      <xmax>1024</xmax>
+      <ymax>0</ymax>
+    </extent>
+    <rotation>0</rotation>
+    <rendermaptile>0</rendermaptile>
+  </mapcanvas>
   <projectlayers>
-    <maplayer autoRefreshTime="0" geometry="Point" styleCategories="AllStyleCategories" simplifyMaxScale="1" labelsEnabled="0" readOnly="0" refreshOnNotifyEnabled="0" simplifyDrawingTol="1" hasScaleBasedVisibilityFlag="0" simplifyDrawingHints="1" simplifyAlgorithm="0" autoRefreshEnabled="0" refreshOnNotifyMessage="" type="vector" simplifyLocal="1" minScale="1e+8" maxScale="0">
+    <maplayer autoRefreshTime="0" type="vector" geometry="Point" simplifyLocal="1" simplifyMaxScale="1" simplifyDrawingTol="1" maxScale="0" refreshOnNotifyMessage="" autoRefreshEnabled="0" simplifyDrawingHints="1" simplifyAlgorithm="0" refreshOnNotifyEnabled="0" styleCategories="AllStyleCategories" minScale="1e+8" readOnly="0" labelsEnabled="0" hasScaleBasedVisibilityFlag="0">
       <extent>
-        <xmin>-93.24939999999999429</xmin>
-        <ymin>-40.98120000000000118</ymin>
-        <xmax>62.21289999999999765</xmax>
-        <ymax>75.65080000000000382</ymax>
+        <xmin>-35.00162999999999869</xmin>
+        <ymin>25.9994000000000014</ymin>
+        <xmax>30.40759999999999863</xmax>
+        <ymax>38.23763999999999896</ymax>
       </extent>
       <id>ANTHROPOGENIC_OBJECTS_180_c26bdb07_da1e_413a_8eb7_5a52b0df7b00</id>
-      <datasource>/vsizip/../adereon-data/ANTHROPOGENIC_OBJECTS_180.ZIP</datasource>
+      <datasource>/vsizip/../adereon-data/ANTHROPOGENIC_OBJECTS_180.ZIP|layerid=0|subset="SHORT_NAME" = 'Luna 17' OR "SHORT_NAME" = 'Luna 21'</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -120,7 +140,7 @@
             <description></description>
             <projectionacronym></projectionacronym>
             <ellipsoidacronym></ellipsoidacronym>
-            <geographicflag>false</geographicflag>
+            <geographicflag>true</geographicflag>
           </spatialrefsys>
         </crs>
         <extent/>
@@ -140,10 +160,10 @@
         <Removable>1</Removable>
         <Searchable>1</Searchable>
       </flags>
-      <renderer-v2 type="singleSymbol" symbollevels="0" enableorderby="0" forceraster="0">
+      <renderer-v2 forceraster="0" type="singleSymbol" symbollevels="0" enableorderby="0">
         <symbols>
-          <symbol alpha="1" clip_to_extent="1" name="0" type="marker">
-            <layer class="SimpleMarker" locked="0" enabled="1" pass="0">
+          <symbol type="marker" alpha="1" clip_to_extent="1" name="0">
+            <layer locked="0" class="SimpleMarker" enabled="1" pass="0">
               <prop v="0" k="angle"/>
               <prop v="141,90,153,255" k="color"/>
               <prop v="1" k="horizontal_anchor_point"/>
@@ -164,9 +184,9 @@
               <prop v="1" k="vertical_anchor_point"/>
               <data_defined_properties>
                 <Option type="Map">
-                  <Option value="" name="name" type="QString"/>
+                  <Option type="QString" value="" name="name"/>
                   <Option name="properties"/>
-                  <Option value="collection" name="type" type="QString"/>
+                  <Option type="QString" value="collection" name="type"/>
                 </Option>
               </data_defined_properties>
             </layer>
@@ -175,11 +195,13 @@
         <rotation/>
         <sizescale/>
       </renderer-v2>
-      <customproperties/>
+      <customproperties>
+        <property value="&quot;OID_&quot;" key="dualview/previewExpressions"/>
+      </customproperties>
       <blendMode>0</blendMode>
       <featureBlendMode>0</featureBlendMode>
       <layerOpacity>1</layerOpacity>
-      <geometryOptions geometryPrecision="0" removeDuplicateNodes="0">
+      <geometryOptions removeDuplicateNodes="0" geometryPrecision="0">
         <activeChecks/>
         <checkConfiguration/>
       </geometryOptions>
@@ -256,60 +278,60 @@
         </field>
       </fieldConfiguration>
       <aliases>
-        <alias field="OID_" name="" index="0"/>
-        <alias field="SHORT_NAME" name="" index="1"/>
-        <alias field="MISSION" name="" index="2"/>
-        <alias field="OBJECT" name="" index="3"/>
-        <alias field="LATITUDE" name="" index="4"/>
-        <alias field="LON_360" name="" index="5"/>
-        <alias field="LONGITUDE" name="" index="6"/>
-        <alias field="RADIUS" name="" index="7"/>
-        <alias field="RAD_SRC" name="" index="8"/>
-        <alias field="UNCERTAIN" name="" index="9"/>
+        <alias field="OID_" index="0" name=""/>
+        <alias field="SHORT_NAME" index="1" name=""/>
+        <alias field="MISSION" index="2" name=""/>
+        <alias field="OBJECT" index="3" name=""/>
+        <alias field="LATITUDE" index="4" name=""/>
+        <alias field="LON_360" index="5" name=""/>
+        <alias field="LONGITUDE" index="6" name=""/>
+        <alias field="RADIUS" index="7" name=""/>
+        <alias field="RAD_SRC" index="8" name=""/>
+        <alias field="UNCERTAIN" index="9" name=""/>
       </aliases>
       <excludeAttributesWMS/>
       <excludeAttributesWFS/>
       <defaults>
-        <default expression="" field="OID_" applyOnUpdate="0"/>
-        <default expression="" field="SHORT_NAME" applyOnUpdate="0"/>
-        <default expression="" field="MISSION" applyOnUpdate="0"/>
-        <default expression="" field="OBJECT" applyOnUpdate="0"/>
-        <default expression="" field="LATITUDE" applyOnUpdate="0"/>
-        <default expression="" field="LON_360" applyOnUpdate="0"/>
-        <default expression="" field="LONGITUDE" applyOnUpdate="0"/>
-        <default expression="" field="RADIUS" applyOnUpdate="0"/>
-        <default expression="" field="RAD_SRC" applyOnUpdate="0"/>
-        <default expression="" field="UNCERTAIN" applyOnUpdate="0"/>
+        <default field="OID_" applyOnUpdate="0" expression=""/>
+        <default field="SHORT_NAME" applyOnUpdate="0" expression=""/>
+        <default field="MISSION" applyOnUpdate="0" expression=""/>
+        <default field="OBJECT" applyOnUpdate="0" expression=""/>
+        <default field="LATITUDE" applyOnUpdate="0" expression=""/>
+        <default field="LON_360" applyOnUpdate="0" expression=""/>
+        <default field="LONGITUDE" applyOnUpdate="0" expression=""/>
+        <default field="RADIUS" applyOnUpdate="0" expression=""/>
+        <default field="RAD_SRC" applyOnUpdate="0" expression=""/>
+        <default field="UNCERTAIN" applyOnUpdate="0" expression=""/>
       </defaults>
       <constraints>
-        <constraint exp_strength="0" field="OID_" notnull_strength="0" unique_strength="0" constraints="0"/>
-        <constraint exp_strength="0" field="SHORT_NAME" notnull_strength="0" unique_strength="0" constraints="0"/>
-        <constraint exp_strength="0" field="MISSION" notnull_strength="0" unique_strength="0" constraints="0"/>
-        <constraint exp_strength="0" field="OBJECT" notnull_strength="0" unique_strength="0" constraints="0"/>
-        <constraint exp_strength="0" field="LATITUDE" notnull_strength="0" unique_strength="0" constraints="0"/>
-        <constraint exp_strength="0" field="LON_360" notnull_strength="0" unique_strength="0" constraints="0"/>
-        <constraint exp_strength="0" field="LONGITUDE" notnull_strength="0" unique_strength="0" constraints="0"/>
-        <constraint exp_strength="0" field="RADIUS" notnull_strength="0" unique_strength="0" constraints="0"/>
-        <constraint exp_strength="0" field="RAD_SRC" notnull_strength="0" unique_strength="0" constraints="0"/>
-        <constraint exp_strength="0" field="UNCERTAIN" notnull_strength="0" unique_strength="0" constraints="0"/>
+        <constraint field="OID_" notnull_strength="0" exp_strength="0" constraints="0" unique_strength="0"/>
+        <constraint field="SHORT_NAME" notnull_strength="0" exp_strength="0" constraints="0" unique_strength="0"/>
+        <constraint field="MISSION" notnull_strength="0" exp_strength="0" constraints="0" unique_strength="0"/>
+        <constraint field="OBJECT" notnull_strength="0" exp_strength="0" constraints="0" unique_strength="0"/>
+        <constraint field="LATITUDE" notnull_strength="0" exp_strength="0" constraints="0" unique_strength="0"/>
+        <constraint field="LON_360" notnull_strength="0" exp_strength="0" constraints="0" unique_strength="0"/>
+        <constraint field="LONGITUDE" notnull_strength="0" exp_strength="0" constraints="0" unique_strength="0"/>
+        <constraint field="RADIUS" notnull_strength="0" exp_strength="0" constraints="0" unique_strength="0"/>
+        <constraint field="RAD_SRC" notnull_strength="0" exp_strength="0" constraints="0" unique_strength="0"/>
+        <constraint field="UNCERTAIN" notnull_strength="0" exp_strength="0" constraints="0" unique_strength="0"/>
       </constraints>
       <constraintExpressions>
-        <constraint desc="" field="OID_" exp=""/>
-        <constraint desc="" field="SHORT_NAME" exp=""/>
-        <constraint desc="" field="MISSION" exp=""/>
-        <constraint desc="" field="OBJECT" exp=""/>
-        <constraint desc="" field="LATITUDE" exp=""/>
-        <constraint desc="" field="LON_360" exp=""/>
-        <constraint desc="" field="LONGITUDE" exp=""/>
-        <constraint desc="" field="RADIUS" exp=""/>
-        <constraint desc="" field="RAD_SRC" exp=""/>
-        <constraint desc="" field="UNCERTAIN" exp=""/>
+        <constraint field="OID_" desc="" exp=""/>
+        <constraint field="SHORT_NAME" desc="" exp=""/>
+        <constraint field="MISSION" desc="" exp=""/>
+        <constraint field="OBJECT" desc="" exp=""/>
+        <constraint field="LATITUDE" desc="" exp=""/>
+        <constraint field="LON_360" desc="" exp=""/>
+        <constraint field="LONGITUDE" desc="" exp=""/>
+        <constraint field="RADIUS" desc="" exp=""/>
+        <constraint field="RAD_SRC" desc="" exp=""/>
+        <constraint field="UNCERTAIN" desc="" exp=""/>
       </constraintExpressions>
       <expressionfields/>
       <attributeactions>
         <defaultAction value="{00000000-0000-0000-0000-000000000000}" key="Canvas"/>
       </attributeactions>
-      <attributetableconfig actionWidgetStyle="dropDown" sortOrder="0" sortExpression="">
+      <attributetableconfig sortExpression="" actionWidgetStyle="dropDown" sortOrder="0">
         <columns/>
       </attributetableconfig>
       <conditionalstyles>
@@ -326,10 +348,208 @@
       <editable/>
       <labelOnTop/>
       <widgets/>
-      <previewExpression></previewExpression>
+      <previewExpression>"OID_"</previewExpression>
       <mapTip></mapTip>
     </maplayer>
-    <maplayer autoRefreshTime="0" geometry="Line" styleCategories="AllStyleCategories" simplifyMaxScale="1" labelsEnabled="0" readOnly="0" refreshOnNotifyEnabled="0" simplifyDrawingTol="1" hasScaleBasedVisibilityFlag="0" simplifyDrawingHints="1" simplifyAlgorithm="0" autoRefreshEnabled="0" refreshOnNotifyMessage="" type="vector" simplifyLocal="1" minScale="1e+8" maxScale="0">
+    <maplayer autoRefreshTime="0" type="raster" maxScale="0" refreshOnNotifyMessage="" autoRefreshEnabled="0" refreshOnNotifyEnabled="0" styleCategories="AllStyleCategories" minScale="1e+8" hasScaleBasedVisibilityFlag="0">
+      <extent>
+        <xmin>0</xmin>
+        <ymin>-805</ymin>
+        <xmax>1024</xmax>
+        <ymax>0</ymax>
+      </extent>
+      <id>Raster_34d891f4_0d1e_4554_af49_ee0cd019f29d</id>
+      <datasource>./original_adereon_maps/adereon-topo-map.jpg</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>Raster</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=longlat +a=1737400 +b=1737400 +no_defs</proj4>
+          <srsid>26842</srsid>
+          <srid>200030100</srid>
+          <authid>IAU2000:30100</authid>
+          <description>Moon 2000</description>
+          <projectionacronym>longlat</projectionacronym>
+          <ellipsoidacronym>Moon2000</ellipsoidacronym>
+          <geographicflag>true</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <resourceMetadata>
+        <identifier></identifier>
+        <parentidentifier></parentidentifier>
+        <language></language>
+        <type></type>
+        <title></title>
+        <abstract></abstract>
+        <links/>
+        <fees></fees>
+        <encoding></encoding>
+        <crs>
+          <spatialrefsys>
+            <proj4></proj4>
+            <srsid>0</srsid>
+            <srid>0</srid>
+            <authid></authid>
+            <description></description>
+            <projectionacronym></projectionacronym>
+            <ellipsoidacronym></ellipsoidacronym>
+            <geographicflag>false</geographicflag>
+          </spatialrefsys>
+        </crs>
+        <extent/>
+      </resourceMetadata>
+      <provider>gdal</provider>
+      <noData>
+        <noDataList bandNo="1" useSrcNoData="0"/>
+        <noDataList bandNo="2" useSrcNoData="0"/>
+        <noDataList bandNo="3" useSrcNoData="0"/>
+      </noData>
+      <map-layer-style-manager current="default">
+        <map-layer-style name="default"/>
+      </map-layer-style-manager>
+      <flags>
+        <Identifiable>1</Identifiable>
+        <Removable>1</Removable>
+        <Searchable>1</Searchable>
+      </flags>
+      <customproperties>
+        <property value="Value" key="identify/format"/>
+      </customproperties>
+      <pipe>
+        <rasterrenderer type="multibandcolor" redBand="1" blueBand="3" greenBand="2" opacity="1" alphaBand="-1">
+          <rasterTransparency/>
+          <minMaxOrigin>
+            <limits>MinMax</limits>
+            <extent>WholeRaster</extent>
+            <statAccuracy>Estimated</statAccuracy>
+            <cumulativeCutLower>0.02</cumulativeCutLower>
+            <cumulativeCutUpper>0.98</cumulativeCutUpper>
+            <stdDevFactor>2</stdDevFactor>
+          </minMaxOrigin>
+          <redContrastEnhancement>
+            <minValue>172</minValue>
+            <maxValue>255</maxValue>
+            <algorithm>NoEnhancement</algorithm>
+          </redContrastEnhancement>
+          <greenContrastEnhancement>
+            <minValue>172</minValue>
+            <maxValue>255</maxValue>
+            <algorithm>NoEnhancement</algorithm>
+          </greenContrastEnhancement>
+          <blueContrastEnhancement>
+            <minValue>172</minValue>
+            <maxValue>255</maxValue>
+            <algorithm>NoEnhancement</algorithm>
+          </blueContrastEnhancement>
+        </rasterrenderer>
+        <brightnesscontrast brightness="0" contrast="0"/>
+        <huesaturation colorizeOn="0" colorizeStrength="100" saturation="0" grayscaleMode="0" colorizeBlue="128" colorizeRed="255" colorizeGreen="128"/>
+        <rasterresampler maxOversampling="2"/>
+      </pipe>
+      <blendMode>0</blendMode>
+    </maplayer>
+    <maplayer autoRefreshTime="0" type="raster" maxScale="0" refreshOnNotifyMessage="" autoRefreshEnabled="0" refreshOnNotifyEnabled="0" styleCategories="AllStyleCategories" minScale="1e+8" hasScaleBasedVisibilityFlag="0">
+      <extent>
+        <xmin>0</xmin>
+        <ymin>-805</ymin>
+        <xmax>1024</xmax>
+        <ymax>0</ymax>
+      </extent>
+      <id>Raster_e7bcc772_019e_4b41_913b_bfdfa3c6bf45</id>
+      <datasource>./original_adereon_maps/adereon-topo-map.jpg</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>Raster</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=longlat +a=1737400 +b=1737400 +no_defs</proj4>
+          <srsid>26842</srsid>
+          <srid>200030100</srid>
+          <authid>IAU2000:30100</authid>
+          <description>Moon 2000</description>
+          <projectionacronym>longlat</projectionacronym>
+          <ellipsoidacronym>Moon2000</ellipsoidacronym>
+          <geographicflag>true</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <resourceMetadata>
+        <identifier></identifier>
+        <parentidentifier></parentidentifier>
+        <language></language>
+        <type></type>
+        <title></title>
+        <abstract></abstract>
+        <links/>
+        <fees></fees>
+        <encoding></encoding>
+        <crs>
+          <spatialrefsys>
+            <proj4></proj4>
+            <srsid>0</srsid>
+            <srid>0</srid>
+            <authid></authid>
+            <description></description>
+            <projectionacronym></projectionacronym>
+            <ellipsoidacronym></ellipsoidacronym>
+            <geographicflag>false</geographicflag>
+          </spatialrefsys>
+        </crs>
+        <extent/>
+      </resourceMetadata>
+      <provider>gdal</provider>
+      <noData>
+        <noDataList bandNo="1" useSrcNoData="0"/>
+        <noDataList bandNo="2" useSrcNoData="0"/>
+        <noDataList bandNo="3" useSrcNoData="0"/>
+      </noData>
+      <map-layer-style-manager current="default">
+        <map-layer-style name="default"/>
+      </map-layer-style-manager>
+      <flags>
+        <Identifiable>1</Identifiable>
+        <Removable>1</Removable>
+        <Searchable>1</Searchable>
+      </flags>
+      <customproperties>
+        <property value="Value" key="identify/format"/>
+      </customproperties>
+      <pipe>
+        <rasterrenderer type="multibandcolor" redBand="1" blueBand="3" greenBand="2" opacity="1" alphaBand="-1">
+          <rasterTransparency/>
+          <minMaxOrigin>
+            <limits>MinMax</limits>
+            <extent>WholeRaster</extent>
+            <statAccuracy>Estimated</statAccuracy>
+            <cumulativeCutLower>0.02</cumulativeCutLower>
+            <cumulativeCutUpper>0.98</cumulativeCutUpper>
+            <stdDevFactor>2</stdDevFactor>
+          </minMaxOrigin>
+          <redContrastEnhancement>
+            <minValue>172</minValue>
+            <maxValue>255</maxValue>
+            <algorithm>NoEnhancement</algorithm>
+          </redContrastEnhancement>
+          <greenContrastEnhancement>
+            <minValue>172</minValue>
+            <maxValue>255</maxValue>
+            <algorithm>NoEnhancement</algorithm>
+          </greenContrastEnhancement>
+          <blueContrastEnhancement>
+            <minValue>172</minValue>
+            <maxValue>255</maxValue>
+            <algorithm>NoEnhancement</algorithm>
+          </blueContrastEnhancement>
+        </rasterrenderer>
+        <brightnesscontrast brightness="0" contrast="0"/>
+        <huesaturation colorizeOn="0" colorizeStrength="100" saturation="0" grayscaleMode="0" colorizeBlue="128" colorizeRed="255" colorizeGreen="128"/>
+        <rasterresampler maxOversampling="2"/>
+      </pipe>
+      <blendMode>0</blendMode>
+    </maplayer>
+    <maplayer autoRefreshTime="0" type="vector" geometry="Line" simplifyLocal="1" simplifyMaxScale="1" simplifyDrawingTol="1" maxScale="0" refreshOnNotifyMessage="" autoRefreshEnabled="0" simplifyDrawingHints="1" simplifyAlgorithm="0" refreshOnNotifyEnabled="0" styleCategories="AllStyleCategories" minScale="1e+8" readOnly="0" labelsEnabled="0" hasScaleBasedVisibilityFlag="0">
       <extent>
         <xmin>-179.26041852017735323</xmin>
         <ymin>-71.43503347318215901</ymin>
@@ -373,7 +593,7 @@
             <description></description>
             <projectionacronym></projectionacronym>
             <ellipsoidacronym></ellipsoidacronym>
-            <geographicflag>true</geographicflag>
+            <geographicflag>false</geographicflag>
           </spatialrefsys>
         </crs>
         <extent/>
@@ -393,10 +613,10 @@
         <Removable>1</Removable>
         <Searchable>1</Searchable>
       </flags>
-      <renderer-v2 type="singleSymbol" symbollevels="0" enableorderby="0" forceraster="0">
+      <renderer-v2 forceraster="0" type="singleSymbol" symbollevels="0" enableorderby="0">
         <symbols>
-          <symbol alpha="1" clip_to_extent="1" name="0" type="line">
-            <layer class="SimpleLine" locked="0" enabled="1" pass="0">
+          <symbol type="line" alpha="1" clip_to_extent="1" name="0">
+            <layer locked="0" class="SimpleLine" enabled="1" pass="0">
               <prop v="square" k="capstyle"/>
               <prop v="5;2" k="customdash"/>
               <prop v="3x:0,0,0,0,0,0" k="customdash_map_unit_scale"/>
@@ -414,9 +634,9 @@
               <prop v="3x:0,0,0,0,0,0" k="width_map_unit_scale"/>
               <data_defined_properties>
                 <Option type="Map">
-                  <Option value="" name="name" type="QString"/>
+                  <Option type="QString" value="" name="name"/>
                   <Option name="properties"/>
-                  <Option value="collection" name="type" type="QString"/>
+                  <Option type="QString" value="collection" name="type"/>
                 </Option>
               </data_defined_properties>
             </layer>
@@ -429,7 +649,7 @@
       <blendMode>0</blendMode>
       <featureBlendMode>0</featureBlendMode>
       <layerOpacity>1</layerOpacity>
-      <geometryOptions geometryPrecision="0" removeDuplicateNodes="0">
+      <geometryOptions removeDuplicateNodes="0" geometryPrecision="0">
         <activeChecks/>
         <checkConfiguration/>
       </geometryOptions>
@@ -464,36 +684,36 @@
         </field>
       </fieldConfiguration>
       <aliases>
-        <alias field="start_lon" name="" index="0"/>
-        <alias field="end_lon" name="" index="1"/>
-        <alias field="start_lat" name="" index="2"/>
-        <alias field="end_lat" name="" index="3"/>
+        <alias field="start_lon" index="0" name=""/>
+        <alias field="end_lon" index="1" name=""/>
+        <alias field="start_lat" index="2" name=""/>
+        <alias field="end_lat" index="3" name=""/>
       </aliases>
       <excludeAttributesWMS/>
       <excludeAttributesWFS/>
       <defaults>
-        <default expression="" field="start_lon" applyOnUpdate="0"/>
-        <default expression="" field="end_lon" applyOnUpdate="0"/>
-        <default expression="" field="start_lat" applyOnUpdate="0"/>
-        <default expression="" field="end_lat" applyOnUpdate="0"/>
+        <default field="start_lon" applyOnUpdate="0" expression=""/>
+        <default field="end_lon" applyOnUpdate="0" expression=""/>
+        <default field="start_lat" applyOnUpdate="0" expression=""/>
+        <default field="end_lat" applyOnUpdate="0" expression=""/>
       </defaults>
       <constraints>
-        <constraint exp_strength="0" field="start_lon" notnull_strength="0" unique_strength="0" constraints="0"/>
-        <constraint exp_strength="0" field="end_lon" notnull_strength="0" unique_strength="0" constraints="0"/>
-        <constraint exp_strength="0" field="start_lat" notnull_strength="0" unique_strength="0" constraints="0"/>
-        <constraint exp_strength="0" field="end_lat" notnull_strength="0" unique_strength="0" constraints="0"/>
+        <constraint field="start_lon" notnull_strength="0" exp_strength="0" constraints="0" unique_strength="0"/>
+        <constraint field="end_lon" notnull_strength="0" exp_strength="0" constraints="0" unique_strength="0"/>
+        <constraint field="start_lat" notnull_strength="0" exp_strength="0" constraints="0" unique_strength="0"/>
+        <constraint field="end_lat" notnull_strength="0" exp_strength="0" constraints="0" unique_strength="0"/>
       </constraints>
       <constraintExpressions>
-        <constraint desc="" field="start_lon" exp=""/>
-        <constraint desc="" field="end_lon" exp=""/>
-        <constraint desc="" field="start_lat" exp=""/>
-        <constraint desc="" field="end_lat" exp=""/>
+        <constraint field="start_lon" desc="" exp=""/>
+        <constraint field="end_lon" desc="" exp=""/>
+        <constraint field="start_lat" desc="" exp=""/>
+        <constraint field="end_lat" desc="" exp=""/>
       </constraintExpressions>
       <expressionfields/>
       <attributeactions>
         <defaultAction value="{00000000-0000-0000-0000-000000000000}" key="Canvas"/>
       </attributeactions>
-      <attributetableconfig actionWidgetStyle="dropDown" sortOrder="0" sortExpression="">
+      <attributetableconfig sortExpression="" actionWidgetStyle="dropDown" sortOrder="0">
         <columns/>
       </attributetableconfig>
       <conditionalstyles>
@@ -513,111 +733,211 @@
       <previewExpression></previewExpression>
       <mapTip></mapTip>
     </maplayer>
+    <maplayer autoRefreshTime="0" type="raster" maxScale="0" refreshOnNotifyMessage="" autoRefreshEnabled="0" refreshOnNotifyEnabled="0" styleCategories="AllStyleCategories" minScale="1e+8" hasScaleBasedVisibilityFlag="0">
+      <extent>
+        <xmin>-34.90605608973227447</xmin>
+        <ymin>-5.65995229614745199</ymin>
+        <xmax>32.16308931939548188</xmax>
+        <ymax>38.73113675162055358</ymax>
+      </extent>
+      <id>adereon_topo_map_modified_b773a35c_2f49_443b_86cb_9a00c451cf08</id>
+      <datasource>../adereon-data/adereon-topo-map_modified.tif</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>adereon-topo-map_modified</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=longlat +a=1737400 +b=1737400 +no_defs</proj4>
+          <srsid>29324</srsid>
+          <srid>104903</srid>
+          <authid>EPSG:104903</authid>
+          <description>GCS_Moon_2000</description>
+          <projectionacronym>longlat</projectionacronym>
+          <ellipsoidacronym></ellipsoidacronym>
+          <geographicflag>true</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <resourceMetadata>
+        <identifier></identifier>
+        <parentidentifier></parentidentifier>
+        <language></language>
+        <type></type>
+        <title></title>
+        <abstract></abstract>
+        <links/>
+        <fees></fees>
+        <encoding></encoding>
+        <crs>
+          <spatialrefsys>
+            <proj4></proj4>
+            <srsid>0</srsid>
+            <srid>0</srid>
+            <authid></authid>
+            <description></description>
+            <projectionacronym></projectionacronym>
+            <ellipsoidacronym></ellipsoidacronym>
+            <geographicflag>false</geographicflag>
+          </spatialrefsys>
+        </crs>
+        <extent/>
+      </resourceMetadata>
+      <provider>gdal</provider>
+      <noData>
+        <noDataList bandNo="1" useSrcNoData="1"/>
+        <noDataList bandNo="2" useSrcNoData="1"/>
+        <noDataList bandNo="3" useSrcNoData="1"/>
+      </noData>
+      <map-layer-style-manager current="default">
+        <map-layer-style name="default"/>
+      </map-layer-style-manager>
+      <flags>
+        <Identifiable>1</Identifiable>
+        <Removable>1</Removable>
+        <Searchable>1</Searchable>
+      </flags>
+      <customproperties>
+        <property value="Value" key="identify/format"/>
+      </customproperties>
+      <pipe>
+        <rasterrenderer type="multibandcolor" redBand="1" blueBand="3" greenBand="2" opacity="1" alphaBand="-1">
+          <rasterTransparency/>
+          <minMaxOrigin>
+            <limits>MinMax</limits>
+            <extent>WholeRaster</extent>
+            <statAccuracy>Estimated</statAccuracy>
+            <cumulativeCutLower>0.02</cumulativeCutLower>
+            <cumulativeCutUpper>0.98</cumulativeCutUpper>
+            <stdDevFactor>2</stdDevFactor>
+          </minMaxOrigin>
+          <redContrastEnhancement>
+            <minValue>94</minValue>
+            <maxValue>255</maxValue>
+            <algorithm>NoEnhancement</algorithm>
+          </redContrastEnhancement>
+          <greenContrastEnhancement>
+            <minValue>94</minValue>
+            <maxValue>255</maxValue>
+            <algorithm>NoEnhancement</algorithm>
+          </greenContrastEnhancement>
+          <blueContrastEnhancement>
+            <minValue>94</minValue>
+            <maxValue>255</maxValue>
+            <algorithm>NoEnhancement</algorithm>
+          </blueContrastEnhancement>
+        </rasterrenderer>
+        <brightnesscontrast brightness="0" contrast="0"/>
+        <huesaturation colorizeOn="0" colorizeStrength="100" saturation="0" grayscaleMode="0" colorizeBlue="128" colorizeRed="255" colorizeGreen="128"/>
+        <rasterresampler maxOversampling="2"/>
+      </pipe>
+      <blendMode>0</blendMode>
+    </maplayer>
   </projectlayers>
   <layerorder>
     <layer id="WRINKLE_RIDGES_180_dd08ecd8_4803_4750_b98e_6cf80c0d798d"/>
     <layer id="ANTHROPOGENIC_OBJECTS_180_c26bdb07_da1e_413a_8eb7_5a52b0df7b00"/>
+    <layer id="adereon_topo_map_modified_b773a35c_2f49_443b_86cb_9a00c451cf08"/>
   </layerorder>
   <properties>
-    <WMSContactOrganization type="QString"></WMSContactOrganization>
-    <WMSRequestDefinedDataSources type="bool">false</WMSRequestDefinedDataSources>
-    <SpatialRefSys>
-      <ProjectionsEnabled type="int">1</ProjectionsEnabled>
-    </SpatialRefSys>
-    <PositionPrecision>
-      <DecimalPlaces type="int">2</DecimalPlaces>
-      <Automatic type="bool">true</Automatic>
-      <DegreeFormat type="QString">MU</DegreeFormat>
-    </PositionPrecision>
-    <WMSUseLayerIDs type="bool">false</WMSUseLayerIDs>
-    <WMSOnlineResource type="QString"></WMSOnlineResource>
-    <WMSPrecision type="QString">8</WMSPrecision>
-    <WMSServiceTitle type="QString"></WMSServiceTitle>
-    <WMSServiceAbstract type="QString"></WMSServiceAbstract>
-    <WMSContactPerson type="QString"></WMSContactPerson>
-    <WMSContactMail type="QString"></WMSContactMail>
-    <WMSAddWktGeometry type="bool">false</WMSAddWktGeometry>
     <Macros>
       <pythonCode type="QString"></pythonCode>
     </Macros>
-    <WMSContactPosition type="QString"></WMSContactPosition>
-    <WMSKeywordList type="QStringList">
-      <value></value>
-    </WMSKeywordList>
-    <Paths>
-      <Absolute type="bool">false</Absolute>
-    </Paths>
-    <WMSContactPhone type="QString"></WMSContactPhone>
-    <WCSUrl type="QString"></WCSUrl>
-    <WMSUrl type="QString"></WMSUrl>
-    <WFSTLayers>
-      <Insert type="QStringList"/>
-      <Update type="QStringList"/>
-      <Delete type="QStringList"/>
-    </WFSTLayers>
-    <Legend>
-      <filterByMap type="bool">false</filterByMap>
-    </Legend>
+    <WMTSMinScale type="int">5000</WMTSMinScale>
     <WMSServiceCapabilities type="bool">false</WMSServiceCapabilities>
+    <WMSContactMail type="QString"></WMSContactMail>
     <DefaultStyles>
-      <Marker type="QString"></Marker>
-      <Line type="QString"></Line>
       <Opacity type="double">1</Opacity>
-      <ColorRamp type="QString"></ColorRamp>
-      <Fill type="QString"></Fill>
+      <Line type="QString"></Line>
+      <Marker type="QString"></Marker>
       <RandomColors type="bool">true</RandomColors>
+      <Fill type="QString"></Fill>
+      <ColorRamp type="QString"></ColorRamp>
     </DefaultStyles>
-    <WFSLayers type="QStringList"/>
-    <Gui>
-      <SelectionColorBluePart type="int">0</SelectionColorBluePart>
-      <CanvasColorBluePart type="int">255</CanvasColorBluePart>
-      <SelectionColorGreenPart type="int">255</SelectionColorGreenPart>
-      <CanvasColorRedPart type="int">255</CanvasColorRedPart>
-      <CanvasColorGreenPart type="int">255</CanvasColorGreenPart>
-      <SelectionColorAlphaPart type="int">255</SelectionColorAlphaPart>
-      <SelectionColorRedPart type="int">255</SelectionColorRedPart>
-    </Gui>
-    <Measure>
-      <Ellipsoid type="QString">Moon2000</Ellipsoid>
-    </Measure>
-    <WMSAccessConstraints type="QString">None</WMSAccessConstraints>
+    <PositionPrecision>
+      <DegreeFormat type="QString">MU</DegreeFormat>
+      <DecimalPlaces type="int">2</DecimalPlaces>
+      <Automatic type="bool">true</Automatic>
+    </PositionPrecision>
     <PAL>
       <ShowingCandidates type="bool">false</ShowingCandidates>
-      <CandidatesLine type="int">50</CandidatesLine>
-      <DrawRectOnly type="bool">false</DrawRectOnly>
-      <ShowingPartialsLabels type="bool">true</ShowingPartialsLabels>
-      <ShowingAllLabels type="bool">false</ShowingAllLabels>
-      <DrawOutlineLabels type="bool">true</DrawOutlineLabels>
       <SearchMethod type="int">0</SearchMethod>
+      <DrawOutlineLabels type="bool">true</DrawOutlineLabels>
+      <CandidatesLine type="int">50</CandidatesLine>
+      <ShowingPartialsLabels type="bool">true</ShowingPartialsLabels>
       <CandidatesPoint type="int">16</CandidatesPoint>
+      <DrawRectOnly type="bool">false</DrawRectOnly>
+      <ShowingAllLabels type="bool">false</ShowingAllLabels>
       <CandidatesPolygon type="int">30</CandidatesPolygon>
     </PAL>
-    <Measurement>
-      <DistanceUnits type="QString">&lt;unknown></DistanceUnits>
-      <AreaUnits type="QString">&lt;unknown></AreaUnits>
-    </Measurement>
-    <WFSUrl type="QString"></WFSUrl>
-    <WMTSJpegLayers>
-      <Project type="bool">false</Project>
-      <Layer type="QStringList"/>
-      <Group type="QStringList"/>
-    </WMTSJpegLayers>
-    <WMTSUrl type="QString"></WMTSUrl>
-    <WCSLayers type="QStringList"/>
+    <WMSAddWktGeometry type="bool">false</WMSAddWktGeometry>
     <WMTSPngLayers>
       <Project type="bool">false</Project>
       <Layer type="QStringList"/>
       <Group type="QStringList"/>
     </WMTSPngLayers>
-    <WMSSegmentizeFeatureInfoGeometry type="bool">false</WMSSegmentizeFeatureInfoGeometry>
-    <WMSImageQuality type="int">90</WMSImageQuality>
-    <WMSFees type="QString">conditions unknown</WMSFees>
-    <WMTSMinScale type="int">5000</WMTSMinScale>
+    <Paths>
+      <Absolute type="bool">false</Absolute>
+    </Paths>
+    <WMSServiceTitle type="QString"></WMSServiceTitle>
+    <Measure>
+      <Ellipsoid type="QString">Moon2000</Ellipsoid>
+    </Measure>
+    <WMSUseLayerIDs type="bool">false</WMSUseLayerIDs>
+    <WCSUrl type="QString"></WCSUrl>
     <WMTSLayers>
       <Project type="bool">false</Project>
       <Layer type="QStringList"/>
       <Group type="QStringList"/>
     </WMTSLayers>
+    <WMSContactOrganization type="QString"></WMSContactOrganization>
+    <WMSContactPosition type="QString"></WMSContactPosition>
+    <WMSContactPerson type="QString"></WMSContactPerson>
+    <SpatialRefSys>
+      <ProjectionsEnabled type="int">1</ProjectionsEnabled>
+    </SpatialRefSys>
+    <WMSSegmentizeFeatureInfoGeometry type="bool">false</WMSSegmentizeFeatureInfoGeometry>
+    <WMSPrecision type="QString">8</WMSPrecision>
+    <WMSImageQuality type="int">90</WMSImageQuality>
+    <WMSContactPhone type="QString"></WMSContactPhone>
+    <WMTSJpegLayers>
+      <Project type="bool">false</Project>
+      <Layer type="QStringList"/>
+      <Group type="QStringList"/>
+    </WMTSJpegLayers>
+    <WFSLayers type="QStringList"/>
+    <WMSUrl type="QString"></WMSUrl>
+    <WMSOnlineResource type="QString"></WMSOnlineResource>
+    <WMSServiceAbstract type="QString"></WMSServiceAbstract>
+    <Measurement>
+      <DistanceUnits type="QString">&lt;unknown></DistanceUnits>
+      <AreaUnits type="QString">&lt;unknown></AreaUnits>
+    </Measurement>
+    <Gui>
+      <SelectionColorBluePart type="int">0</SelectionColorBluePart>
+      <CanvasColorRedPart type="int">255</CanvasColorRedPart>
+      <SelectionColorGreenPart type="int">255</SelectionColorGreenPart>
+      <CanvasColorBluePart type="int">255</CanvasColorBluePart>
+      <SelectionColorRedPart type="int">255</SelectionColorRedPart>
+      <CanvasColorGreenPart type="int">255</CanvasColorGreenPart>
+      <SelectionColorAlphaPart type="int">255</SelectionColorAlphaPart>
+    </Gui>
+    <WMSFees type="QString">conditions unknown</WMSFees>
+    <WMTSUrl type="QString"></WMTSUrl>
+    <WMSKeywordList type="QStringList">
+      <value></value>
+    </WMSKeywordList>
+    <Legend>
+      <filterByMap type="bool">false</filterByMap>
+    </Legend>
+    <WMSAccessConstraints type="QString">None</WMSAccessConstraints>
+    <WCSLayers type="QStringList"/>
+    <WFSUrl type="QString"></WFSUrl>
+    <WFSTLayers>
+      <Insert type="QStringList"/>
+      <Delete type="QStringList"/>
+      <Update type="QStringList"/>
+    </WFSTLayers>
+    <WMSRequestDefinedDataSources type="bool">false</WMSRequestDefinedDataSources>
   </properties>
   <visibility-presets/>
   <transformContext/>

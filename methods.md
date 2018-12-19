@@ -41,15 +41,19 @@ The original "data" is shown below: three continents, some islands, forests and 
 ![Adereon topo map](screenshots-and-images/figure-01.png)
 *Figure 01: Original map of the known world of Adereon, where this idea began*
 
-It's just a scanned and hand drawn map of an imaginary group of continents and water features, but we might think of this data in the same way we would treat an old map whose entire extent needed to be digitized.
+It's just a scanned and hand drawn map of an imaginary region, but we might think of this data in the same way we would treat an old map whose entire extent needed to be digitized.
 
-In order to familiarize myself with the Moon's coordinate system and make sure it would be appropriate for our data, I downloaded some shapefiles of different features on Earth's moon from the [Lunar Reconnaissance Orbiter Camera](http://lroc.sese.asu.edu/about) (LROC) as a comparison. (Washington University in St. Louis's [Lunar Orbital Data Explorer](https://ode.rsl.wustl.edu/mars/coverage/ODE_Moon_shapefile.html) also has interesting lunar data, but it was much less useful for my purposes.)
+The data I am creating does not need to be perfect; indeed, it's a dataset of imaginary topographies, so no harm done if it's a few miles off. Nate and I had agreed that the western continent was roughly equivalent to Nebraska in length. For the sake of simplicity, I treated the original map in Figure 01 as 1,000 miles across from end to end (I figured that would approximate the western continent at 430 miles, give or take). But before blindly importing it to QGIS for georeferencing, I needed to find a spatial reference.
 
-Specifically, I downloaded the the line feature [Wrinkle Ridges](http://wms.lroc.asu.edu/lroc/view_rdr/SHAPEFILE_WRINKLE_RIDGES) point feature [Anthropogenic Objects](http://wms.lroc.asu.edu/lroc/view_rdr/SHAPEFILE_ANTHROPOGENIC_OBJECTS). Wrinkle Ridges covered most of the lunar territory, providing a full scope of the space I was working with, while Anthropogenic Objects provided a set of clear spatial referents that would become essential for georeferencing.
+In order to properly georeference the scanned map of Adereon with the, I downloaded some shapefiles of different features on Earth's moon from the [Lunar Reconnaissance Orbiter Camera](http://lroc.sese.asu.edu/about) (LROC) to use as a comparison. (Washington University in St. Louis's [Lunar Orbital Data Explorer](https://ode.rsl.wustl.edu/mars/coverage/ODE_Moon_shapefile.html) also has interesting lunar data, but it was much less useful for my purposes.) Specifically, I downloaded the the line feature [Wrinkle Ridges](http://wms.lroc.asu.edu/lroc/view_rdr/SHAPEFILE_WRINKLE_RIDGES) point feature [Anthropogenic Objects](http://wms.lroc.asu.edu/lroc/view_rdr/SHAPEFILE_ANTHROPOGENIC_OBJECTS). Wrinkle Ridges covered most of the lunar territory, providing a full scope of the space I was working with, while Anthropogenic Objects provided a set of clear spatial referents that would become essential for georeferencing. Figure 02 shows the two sets of lunar data loaded in QGIS in the IAU Moon 2000 Geographic Coordinate System. This was also helpful to generally contextualize what the area looked like.
 
 ![Moon data in QGIS](screenshots-and-images/figure-02.png)
 *Figure 02: Moon data in QGIS*
 
-This 
+After playing around with the measuring tool, I found two objects that were about 1,000 miles from one another: "Luna 17" and "Luna 21." I filtered for them and found a new extent, which would ultimately become the extent for Adereon.
+
+![Extent for Adereon](screenshots-and-images/figure-03.png)
+
+On to georeferencing!
 
 ### Georeferencing

@@ -38,7 +38,7 @@ With a coordinate reference system selected, the next step was data creation. He
 
 The original "data" is shown below.
 
-![Adereon topo map](/adereon-topo-map.jpg)
+![Adereon topo map](original_adereon_maps/adereon-topo-map.jpg)
 [Figure 01](https://github.com/itspangler/Adereon/blob/master/original_adereon_maps/adereon-topo-map.jpg).
 
 It's just a hand drawn map of an imaginary group of continents and water features, but we might think of this data in the same way we would treat an old map whose entire extent needed to be digitized.

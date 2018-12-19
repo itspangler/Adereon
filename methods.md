@@ -57,3 +57,5 @@ After playing around with the measuring tool, I found two objects that were abou
 On to georeferencing!
 
 ### Georeferencing
+
+Replicating the instructions from Lesson 6 made this section rather simple.

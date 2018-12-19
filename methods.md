@@ -36,18 +36,20 @@ With a coordinate reference system selected, the next step was data creation. He
 
 ### Contextualizing
 
-The original "data" is shown below: three continents, some islands, forests and mountains and oceans
+The original "data" is shown below: three continents, some islands, forests and mountains and rivers and oceans.
 
 ![Adereon topo map](screenshots-and-images/figure-01.png)
-Figure 01: original map of the known world of Adereon
+Figure 01: Original map of the known world of Adereon, where this idea began
 
 It's just a scanned and hand drawn map of an imaginary group of continents and water features, but we might think of this data in the same way we would treat an old map whose entire extent needed to be digitized.
 
-In order to familiarize myself with the Moon's coordinate system and make sure it worked, I downloaded some shapefiles of different features on Earth's moon from the [Lunar Reconnaissance Orbiter Camera](http://lroc.sese.asu.edu/about), or LROC. Washington University in St. Louis's [Lunar Orbital Data Explorer](https://ode.rsl.wustl.edu/mars/coverage/ODE_Moon_shapefile.html) also has interesting lunar data, but it was much less useful for my purposes.
+In order to familiarize myself with the Moon's coordinate system and make sure it would be appropriate for our data, I downloaded some shapefiles of different features on Earth's moon from the [Lunar Reconnaissance Orbiter Camera](http://lroc.sese.asu.edu/about) (LROC) as a comparison. (Washington University in St. Louis's [Lunar Orbital Data Explorer](https://ode.rsl.wustl.edu/mars/coverage/ODE_Moon_shapefile.html) also has interesting lunar data, but it was much less useful for my purposes.)
 
-Specifically, I downloaded the the line feature ["Wrinkle Ridges"](http://wms.lroc.asu.edu/lroc/view_rdr/SHAPEFILE_WRINKLE_RIDGES) point feature ["Anthropogenic Features"](http://wms.lroc.asu.edu/lroc/view_rdr/SHAPEFILE_ANTHROPOGENIC_OBJECTS).
+Specifically, I downloaded the the line feature [Wrinkle Ridges](http://wms.lroc.asu.edu/lroc/view_rdr/SHAPEFILE_WRINKLE_RIDGES) point feature [Anthropogenic Objects](http://wms.lroc.asu.edu/lroc/view_rdr/SHAPEFILE_ANTHROPOGENIC_OBJECTS). Wrinkle Ridges covered most of the lunar territory, providing a full scope of the space I was working with, while Anthropogenic Objects provided a set of clear spatial referents that I would eventually use in georeferencing.
 
 ![Moon data in QGIS](screenshots-and-images/figure-02.png)
 Figure 02: Moon data in QGIS
+
+This
 
 ### Georeferencing

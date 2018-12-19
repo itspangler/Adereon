@@ -53,9 +53,19 @@ In order to properly georeference the scanned map of Adereon with the, I downloa
 After playing around with the measuring tool, I found two objects that were about 1,000 miles from one another: "Luna 17" and "Luna 21." I filtered for them and found a new extent, which would ultimately become the extent for Adereon.
 
 ![Extent for Adereon](screenshots-and-images/figure-03.png)
+*Figure 03: Extent for Adereon*
 
 On to georeferencing!
 
 ### Georeferencing
 
-Replicating the instructions from Lesson 6 made this section rather simple. The file _adereon-topo-map.jpg_, which is the original map in Figure 01 drawn by Nate, is an unreferenced image that has no coordinate information with which a GIS can place size or location (essentially the same as _sidewalk.jpg_ from Lesson 6). As such, I imported _adereon-topo-map.jpg_ into the Georeferencer in the IAU Moon 2000 Geographic Coordinate System
+Replicating the instructions from Lesson 6 made this section rather simple. The file _adereon-topo-map.jpg_, which is the original map in Figure 01 drawn by Nate, is an unreferenced image that has no coordinate information with which a GIS can place size or location (essentially the same as _sidewalk.jpg_ from Lesson 6). As such, I imported _adereon-topo-map.jpg_ into the GDAL Georeferencer in the IAU Moon 2000 Geographic Coordinate System. Since I was only georeferencing to get the topo map *somewhere* in QGIS, rather than georeferencing it against specific features, it was simple to do and I just approximated 5 points as best I could. The result can be seen below.
+
+![Georeferenced Adereon topo map](screenshots-and-images/figure-04.png)
+*Figure 04: Georeferenced Adereon topo map*
+
+
+
+
+
+#Fin

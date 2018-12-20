@@ -53,12 +53,12 @@ The data I am creating does not need to be perfect; indeed, it's a dataset of im
 To situate myself, I downloaded some files of different features on Earth's moon from the [USGS](https://webgis.wr.usgs.gov/pigwad/down/moon_dl.htm), which could be used to determine the extent of what I'd be mapping. Specifically, I downloaded (1) a raster file of the moon, and (2) a vector file of the moon's quadrants. They each covered the moon's full extent and thus serve as a kind of "basemap" in my fantasy GIS.
 
 ![Full extent of the moon/my mapping territory](screenshots-and-images/figure-02.png)
-*Full extent of the moon/my mapping territory*
+*Figure 02: Full extent of the moon/my mapping territory*
 
 I selected a few quadrants to georeference against
 
 ![My selected extent for Adereon](screenshots-and-images/figure-03.png)
-*My selected extent for Adereon*
+*Figure 03: My selected extent for Adereon*
 
 On to georeferencing!
 
@@ -69,7 +69,9 @@ Replicating the instructions from Lesson 6 made this section rather simple. The 
 ![Georeferenced Adereon topo map](screenshots-and-images/figure-04.png)
 *Figure 04: Georeferenced Adereon topo map*
 
+### Geoprocessing
 
+This is where things got a little hairy.
 
 
 

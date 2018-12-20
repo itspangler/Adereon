@@ -125,6 +125,7 @@ The Union tool joined them up nicely, into a single file:
 After a quick Dissolve, the internal borders are gone and we have a vector file that somewhat resembles the original scanned topo map.
 
 ![Dissolve from Difference output](screenshots-and-images/figure-13.png)
+
 *Figure 13: Dissolve from Difference output*
 
 Unfortunately, there are some donut holes, but those will be fixed as a byproduct of the next step.

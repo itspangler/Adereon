@@ -12,6 +12,12 @@
     - [Contextualizing](#contextualizing)
     - [Georeferencing](#georeferencing)
     - [Geoprocessing](#geoprocessing)
+      - [Vectorize the Raster](#vectorize-the-raster)
+      - [Dissolve vectorized map](#dissolve-vectorized-map)
+      - [Create background and subtract difference](#create-background-and-subtract-difference)
+      - [Union and Dissolve](#union-and-dissolve)
+      - [Smoothing through buffer-debuffer](#smoothing-through-buffer-debuffer)
+
 
 <!-- /TOC -->
 
@@ -156,6 +162,13 @@ Now, admittedly, this data kind of looks like somebody took a bunch of small bit
 ![One of the continents, digitized by hand](screenshots-and-images/figure-18.png)
 *Figure 18: One of the continents, digitized by hand*
 
-All things considered, I probably could have done it by hand in half the time and had a better looking dataset -- but where's the fun in that?
+All things considered, I definitely could have done this by hand in half the time and had a better looking dataset, but I was curious about what the raster to vector workflow would look like for this.
+
+After manually making some small adjustments, I was left with a basic that I was more or less pleased with:
+
+![Final continent boundaries](screenshots-and-images/figure-19.png)
+*Figure 19: Final continent boundaries*
+
+###
 
 #Fin

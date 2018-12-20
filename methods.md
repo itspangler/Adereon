@@ -172,7 +172,7 @@ I ended up deciding that the automated workflow was too far off from the origina
 
 #### New Feature and Attribute Creation
 
-This section doesn't need much explanation. I went in and manually digitized/created attributes for the features Nate had drawn on the topo map. The result is below:
+This section doesn't need much explanation, but it did take a bit of time. I went in and manually digitized/created attributes for the features Nate had drawn on the topo map. The result is below:
 
 ![Final continent boundaries](screenshots-and-images/figure-20.png)
 *Figure 20: Final continent boundaries*
@@ -181,9 +181,12 @@ This section doesn't need much explanation. I went in and manually digitized/cre
 
 Now that the topo map had been completely created, I needed to overlay the political map he had drawn. This map includes states boundaries and capital cities, and while it was the same original dimensions as Nate's topo map, it is hand drawn so the boundaries do not exactly align (plus, like I indicated before, I stretched the map a bit east and west to leave more space on the bottom of the extent).
 
-This time I added 62 points in the georeferencer, the results of which are below: 
+This time I added 62 points in the georeferencer, the results of which are below:
 
-![Georeferencing political map](screenshots-and-images/figure-21.png)
-*Figure 21: Georeferencing political map*
+![Georeferencing points for political map overlaid on topo](screenshots-and-images/figure-21.png)
+*Figure 21: Georeferencing points for political map overlaid on topo*
+
+![Georeferenced political map](screenshots-and-images/figure-22.png)
+*Figure 22: Georeferenced political map*
 
 #Fin

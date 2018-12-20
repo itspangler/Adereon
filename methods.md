@@ -50,15 +50,15 @@ It's just a scanned and hand drawn map of an imaginary region, but we might thin
 
 The data I am creating does not need to be perfect; indeed, it's a dataset of imaginary topographies, so no harm done if it's a few miles off. Nate and I had agreed that the western continent was roughly equivalent to Nebraska in length.
 
-To situate myself, I downloaded some files of different features on Earth's moon from the [USGS](https://webgis.wr.usgs.gov/pigwad/down/moon_dl.htm), which could be used to determine the extent of what I'd be mapping. Specifically, I downloaded (1) a raster file of the moon's extent, and (2) a vector file of the moon's quadrants. They each covered the extent of the moon and thus serve as a kind of "basemap" in my fantasy GIS.
+To situate myself, I downloaded some files of different features on Earth's moon from the [USGS](https://webgis.wr.usgs.gov/pigwad/down/moon_dl.htm), which could be used to determine the extent of what I'd be mapping. Specifically, I downloaded (1) a raster file of the moon, and (2) a vector file of the moon's quadrants. They each covered the moon's full extent and thus serve as a kind of "basemap" in my fantasy GIS.
 
-![Moon background in QGIS](screenshots-and-images/figure-02.png)
-*Figure 02: Moon data in QGIS*
+![Full extent of the moon/my mapping territory](screenshots-and-images/figure-02.png)
+*Full extent of the moon/my mapping territory*
 
-After playing around with the measuring tool, I found two objects that were about 1,000 miles from one another: "Luna 17" and "Luna 21." I filtered for them and found a new extent, which would ultimately become the extent for Adereon.
+I selected a few quadrants to georeference against
 
-![Extent for Adereon](screenshots-and-images/figure-03.png)
-*Figure 03: Extent for Adereon*
+![My selected extent for Adereon](screenshots-and-images/figure-03.png)
+*My selected extent for Adereon*
 
 On to georeferencing!
 

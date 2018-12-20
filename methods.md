@@ -69,9 +69,13 @@ Replicating the instructions from Lesson 6 made this section rather simple. The 
 ![Georeferenced Adereon topo map](screenshots-and-images/figure-04.png)
 *Figure 04: Georeferenced Adereon topo map*
 
+I distorted the original map a little bit in order to leave more space at the bottom for future world building stuff.
+
 ### Geoprocessing
 
-This is where things got a little hairy.
+This is where things got a little hairy. Instead of manually digitizing all of the continents, I chose to "polygonize" my raster data, i.e., the georeferenced topo map of Adereon.
+
+#### First step
 
 
 

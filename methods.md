@@ -1,11 +1,10 @@
-# The Continents of Adereon:
-# Methods for Creating a Fantasy Map
+# The Continents of Adereon: Methods for Creating a Fantasy Map
 
 ## Table of Contents
 
 <!-- TOC depthTo:3 -->
 
-- [Methods for Fantasy Mapping](#methods-for-fantasy-mapping)
+- [The Continents of Adereon: Methods for Fantasy Mapping](#the-continents-of-adereon-methods-for-fantasy-mapping)
   - [Table of Contents](#table-of-contents)
   - [Overview](#overview)
   - [Coordinate System and Projection](#coordinate-system-and-projection)
@@ -18,17 +17,17 @@
 
 ## Overview
 
-The three continents in the known world of Adereon have, to this day, never been mapped in a geographic information system.
+The landmasses in the known world of Adereon have, to this day, never been mapped in a geographic information system.
 
-In this document, I'll detail some of the key considerations and techniques that went into making a spatial database -- and a few maps to go along with it -- of my friend Nate's homebrewed Dungeons & Dragons universe.  Just a note: this map was creatively co-authored with my friend Nate, who is the brains behind most of the fantasy stuff. As such, I will sometimes refer to him in the mapmaking process.
+In this document, I'll detail some of the key considerations and techniques that went into making a spatial database -- and a few maps to go along with it -- of my friend Nate's homebrewed Dungeons & Dragons universe.
 
 ## Coordinate System and Projection
 
-Making a fantasy map in GIS is kind of a weird endeavor from the start. It complicates the most basic pair of principles that cartographers and geographers deal with: namely, coordinate systems and projections. If I wanted this map to be spatially sound (for example, measuring distance in miles from one city to the next), it would have to be properly projected -- which first means figuring out how large the globe is. Instead of creating my own coordinate system from scratch, I suggested to Nate that we use an established one, to which he was amenable.
+A fantasy GIS is kind of a weird endeavor from the start, not least because it complicates the most basic pair of principles that cartographers and geographers deal with: namely, coordinate systems and projections. If I wanted this map to be spatially sound (for example, measuring distance in miles from one city to the next), it would have to be properly projected -- which first means figuring out how large the globe is. Instead of creating my own coordinate system from scratch, I suggested to Nate that we use an established one, to which he was amenable.
 
-Nate and I established that the size of the western continent in Adereon was roughly as long as the territory of Nebraska (i.e., 430 miles from the west coast to the east coast). Unfortunately that was going to leave way too much empty space out there if we used a GCS based on Earth. Considering, Nate was agreeable to a conceptual globe roughly the size of our Earth's moon, whose circumference is about 6,800 miles and is a much more reasonable hunk of territory for a D&D campaign.
+Nate and I established that the size of the western continent in Adereon was roughly as long as the territory of Nebraska (i.e., 430 miles from the west coast to the east coast). Unfortunately that was going to leave way too much empty space out there if we used a GCS based on Earth. Considering, Nate was agreeable to a conceptual globe roughly the size of our Earth's moon, whose circumference is about 6,800 miles and is a much more reasonably sized big blue marble, so to speak, for the purposes of a D&D campaign.
 
-There is also a GSC available for the moon -- GCS_Moon_2000 -- and even a few projections. Great! So this is what I ran with when selecting a coordinate system.
+There is, luckily, a GCS available for the moon -- GCS_Moon_2000 -- so this is what I ran with when selecting a coordinate system.
 
 I suppose what I am doing, then, could be considered [selenographic mapping](https://en.wikipedia.org/wiki/Selenographic_coordinates). Super!
 
@@ -51,7 +50,7 @@ It's just a scanned and hand drawn map of an imaginary region, but we might thin
 
 The data I am creating does not need to be perfect; indeed, it's a dataset of imaginary topographies, so no harm done if it's a few miles off. Nate and I had agreed that the western continent was roughly equivalent to Nebraska in length.
 
-In order to properly georeference the scanned map of Adereon, I downloaded some files of different features on Earth's moon from the [Lunar Reconnaissance Orbiter Camera](http://lroc.sese.asu.edu/about) (LROC) to use as a comparison. (Washington University in St. Louis's [Lunar Orbital Data Explorer](https://ode.rsl.wustl.edu/mars/coverage/ODE_Moon_shapefile.html) also has interesting lunar data, but it was much less useful for my purposes.) Specifically, I downloaded a [Wrinkle Ridges](http://wms.lroc.asu.edu/lroc/view_rdr/SHAPEFILE_WRINKLE_RIDGES) point feature [Anthropogenic Objects](http://wms.lroc.asu.edu/lroc/view_rdr/SHAPEFILE_ANTHROPOGENIC_OBJECTS). Wrinkle Ridges covered most of the lunar territory, providing a full scope of the space I was working with, while Anthropogenic Objects provided a set of clear spatial referents that would become essential for georeferencing. Figure 02 shows the two sets of lunar data loaded in QGIS in the IAU Moon 2000 Geographic Coordinate System. This was also helpful to generally contextualize what the area looked like.
+To situate myself, I downloaded some files of different features on Earth's moon from the [USGS](https://webgis.wr.usgs.gov/pigwad/down/moon_dl.htm), which could be used to determine the extent of what I'd be mapping. Specifically, I downloaded (1) a raster file of the moon's extent, and (2) a vector file of the moon's quadrants. They each covered the extent of the moon and thus serve as a kind of "basemap" in my fantasy GIS.
 
 ![Moon background in QGIS](screenshots-and-images/figure-02.png)
 *Figure 02: Moon data in QGIS*

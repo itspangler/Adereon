@@ -22,10 +22,10 @@
     <layer-tree-layer expanded="1" checked="Qt::Unchecked" providerKey="ogr" id="continent_boundaries_bd270d6d_9af3_4c66_8b23_e8a3c6aceb94" name="continent-boundaries" source="./created_data/continent-boundaries/continent-boundaries.shp">
       <customproperties/>
     </layer-tree-layer>
-    <layer-tree-layer expanded="1" checked="Qt::Checked" providerKey="gdal" id="adereon_topo_map_2_e3e569c8_df8c_4eee_8489_389dd23d5994" name="adereon-topo-map_2" source="./original_adereon_maps/adereon-topo-map_2.tif">
+    <layer-tree-layer expanded="1" checked="Qt::Unchecked" providerKey="gdal" id="adereon_topo_map_2_e3e569c8_df8c_4eee_8489_389dd23d5994" name="adereon-topo-map_2" source="./original_adereon_maps/adereon-topo-map_2.tif">
       <customproperties/>
     </layer-tree-layer>
-    <layer-tree-layer expanded="1" checked="Qt::Checked" providerKey="memory" id="output_2d6d104d_07df_48b9_bc51_0e50c7eac286" name="Buffered" source="Polygon?crs=EPSG:4326&amp;field=DN:integer&amp;field=Id:string(255)&amp;field=Quad:string(255)&amp;field=Name:string(255)&amp;field=LAC_Quad:string(255)&amp;field=Web_link:string(255)&amp;field=Nomen_Link:string(255)&amp;field=parall_1:string(255)&amp;field=parall_2:string(255)&amp;field=Cent_long:string(255)&amp;field=Projection:string(255)&amp;field=Num_Name:string(255)&amp;uid={0a7cf94b-787d-459a-9e44-98c85da414ff}">
+    <layer-tree-layer expanded="1" checked="Qt::Unchecked" providerKey="memory" id="output_2d6d104d_07df_48b9_bc51_0e50c7eac286" name="Buffered" source="Polygon?crs=EPSG:4326&amp;field=DN:integer&amp;field=Id:string(255)&amp;field=Quad:string(255)&amp;field=Name:string(255)&amp;field=LAC_Quad:string(255)&amp;field=Web_link:string(255)&amp;field=Nomen_Link:string(255)&amp;field=parall_1:string(255)&amp;field=parall_2:string(255)&amp;field=Cent_long:string(255)&amp;field=Projection:string(255)&amp;field=Num_Name:string(255)&amp;uid={0a7cf94b-787d-459a-9e44-98c85da414ff}">
       <customproperties/>
     </layer-tree-layer>
     <layer-tree-layer expanded="1" checked="Qt::Unchecked" providerKey="memory" id="output_ec53fe58_cd90_408b_81ff_f517689109d6" name="Buffered" source="Polygon?crs=EPSG:4326&amp;field=DN:integer&amp;field=Id:string(255)&amp;field=Quad:string(255)&amp;field=Name:string(255)&amp;field=LAC_Quad:string(255)&amp;field=Web_link:string(255)&amp;field=Nomen_Link:string(255)&amp;field=parall_1:string(255)&amp;field=parall_2:string(255)&amp;field=Cent_long:string(255)&amp;field=Projection:string(255)&amp;field=Num_Name:string(255)&amp;uid={bdd4306c-cb93-4233-837f-8ff350e46773}">
@@ -108,10 +108,10 @@
   <mapcanvas annotationsVisible="1" name="theMapCanvas">
     <units>degrees</units>
     <extent>
-      <xmin>-95.27884353869964684</xmin>
-      <ymin>-30.12908643661040742</ymin>
-      <xmax>140.2409913913868138</xmax>
-      <ymax>97.39267098618563523</ymax>
+      <xmin>-188.99999999999997158</xmin>
+      <ymin>-94.5</ymin>
+      <xmax>189.0000000000002558</xmax>
+      <ymax>94.5</ymax>
     </extent>
     <rotation>0</rotation>
     <destinationsrs>
@@ -135,14 +135,14 @@
         <legendlayerfile layerid="continent_boundaries_bd270d6d_9af3_4c66_8b23_e8a3c6aceb94" visible="0" isInOverview="0"/>
       </filegroup>
     </legendlayer>
-    <legendlayer drawingOrder="-1" checked="Qt::Checked" open="true" showFeatureCount="0" name="adereon-topo-map_2">
+    <legendlayer drawingOrder="-1" checked="Qt::Unchecked" open="true" showFeatureCount="0" name="adereon-topo-map_2">
       <filegroup open="true" hidden="false">
-        <legendlayerfile layerid="adereon_topo_map_2_e3e569c8_df8c_4eee_8489_389dd23d5994" visible="1" isInOverview="0"/>
+        <legendlayerfile layerid="adereon_topo_map_2_e3e569c8_df8c_4eee_8489_389dd23d5994" visible="0" isInOverview="0"/>
       </filegroup>
     </legendlayer>
-    <legendlayer drawingOrder="-1" checked="Qt::Checked" open="true" showFeatureCount="0" name="Buffered">
+    <legendlayer drawingOrder="-1" checked="Qt::Unchecked" open="true" showFeatureCount="0" name="Buffered">
       <filegroup open="true" hidden="false">
-        <legendlayerfile layerid="output_2d6d104d_07df_48b9_bc51_0e50c7eac286" visible="1" isInOverview="0"/>
+        <legendlayerfile layerid="output_2d6d104d_07df_48b9_bc51_0e50c7eac286" visible="0" isInOverview="0"/>
       </filegroup>
     </legendlayer>
     <legendlayer drawingOrder="-1" checked="Qt::Unchecked" open="true" showFeatureCount="0" name="Buffered">

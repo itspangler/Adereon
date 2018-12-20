@@ -650,10 +650,10 @@
         <property value="Value" key="identify/format"/>
       </customproperties>
       <pipe>
-        <rasterrenderer redBand="1" greenBand="2" blueBand="3" type="multibandcolor" opacity="0.349" alphaBand="-1">
+        <rasterrenderer redBand="1" greenBand="2" blueBand="3" type="multibandcolor" opacity="0.592" alphaBand="-1">
           <rasterTransparency/>
           <minMaxOrigin>
-            <limits>MinMax</limits>
+            <limits>None</limits>
             <extent>WholeRaster</extent>
             <statAccuracy>Estimated</statAccuracy>
             <cumulativeCutLower>0.02</cumulativeCutLower>

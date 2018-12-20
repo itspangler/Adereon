@@ -141,9 +141,19 @@ I installed the "Cartographic Line Generalization" plugin but couldn't get it to
 ![Result of buffer-debuffer technique](screenshots-and-images/figure-15.png)
 *Figure 15: Result of buffer-debuffer technique*
 
-When set beneath the original topo map, this doesn't look too bad!
+When set beneath the original topo map, this doesn't look too bad! And it fixed the donut holes to boot.
 
 ![New data beneath original topo map](screenshots-and-images/figure-16.png)
 *Figure 16: New data beneath original topo map*
+
+And here it is by itself:
+
+![Final data for Adereon](screenshots-and-images/figure-17.png)
+*Figure 17: Final data for Adereon*
+
+Now, admittedly, this data kind of looks like somebody took a bunch of small bites out of each continent. It missed some of the detail around the coasts, and looks way less organic than the following image that I digitized before trying this whole geoprocessing workflow:
+
+![One of the continents, digitized by hand](screenshots-and-images/figure-18.png)
+*Figure 18: One of the continents, digitized by hand*
 
 #Fin

@@ -107,8 +107,8 @@ Next, I ran the Difference tool, using the dissolved vectorized output as an ove
 
 After deleting the big useless polygon on the outside, my new file looked like this:
 
-![Final output of Difference tool](screenshots-and-images/figure-10.png)
-*Figure 10: Final output of Difference tool*
+![Output of Difference tool](screenshots-and-images/figure-10.png)
+*Figure 10: Output of Difference tool*
 
 #### Union and Dissolve
 
@@ -122,13 +122,19 @@ The Union tool joined them up nicely, into a single file:
 ![Output of Union tool](screenshots-and-images/figure-12.png)
 *Figure 12: Output of Union tool*
 
+After a quick Dissolve, the internal borders are gone and we have a vector file that somewhat resembles the original scanned topo map.
+
+![Dissolve from Difference output](screenshots-and-images/figure-13.png)
+*Figure 13: Dissolve from Difference output*
+
 Unfortunately, there are some donut holes, but those will be fixed as a byproduct of the next step.
 
 #### Smoothing through buffer-debuffer
 
 At first glance this output looks nice -- much better at least than the original vectorization -- but upon closer inspection it still has the pesky right angles along the boundary.
 
-![Pesky right angles](screenshots-and-images/figure-13.png)
-*Figure 09: Pesky right angles*
+![Pesky right angles](screenshots-and-images/figure-14.png)
+
+*Figure 14: Pesky right angles*
 
 #Fin

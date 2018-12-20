@@ -1,16 +1,18 @@
-# The Continents of Adereon: Methods for Creating a Fantasy Map
+# The Continents of Adereon:
+# Methods for Creating a Fantasy Map
 
 ## Table of Contents
 
 <!-- TOC depthTo:3 -->
 
-- [Methods for Creating a Fantasy Map](#methods-for-creating-a-fantasy-map)
+- [Methods for Fantasy Mapping](#methods-for-fantasy-mapping)
   - [Table of Contents](#table-of-contents)
   - [Overview](#overview)
   - [Coordinate System and Projection](#coordinate-system-and-projection)
   - [Data Creation](#data-creation)
     - [Contextualizing](#contextualizing)
     - [Georeferencing](#georeferencing)
+    - [Geoprocessing](#geoprocessing)
 
 <!-- /TOC -->
 

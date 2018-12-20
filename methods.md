@@ -75,8 +75,21 @@ I distorted the original map a little bit in order to leave more space at the bo
 
 This is where things got a little hairy. Instead of manually digitizing all of the continents, I chose to "polygonize" my raster data, i.e., the georeferenced topo map of Adereon.
 
-#### First step
+#### Raster to Vector
 
+First, I ran the "Polygonize" tool, located in "Raster --> Conversion." It's part of the GDAL library and after quite a bit of troubleshooting I was able to get the tool to work.
+
+![Vectorized map of Adereon](screenshots-and-images/figure-05.png)
+*Figure 05: Vectorized map of Adereon*
+
+Yikes -- this has a bunch of issues and I had my work cut out for me. In order to generate a vector polygon of continents with a clear boundary that was not composed of ugly right angles, my next step was to concatenate all of these messy records (there are over 100,000) into a single polygon. The Dissolve tool is good for this. I deleted the big background polygon, and after setting my geoprocessing preferences to "ignore features with invalid geometry," I ran the Dissolve tool.
+
+![Dissolved vectorized map of Adereon](screenshots-and-images/figure-06.png)
+*Figure 06: Dissolved vectorized map of Adereon
+
+
+
+####
 
 
 #Fin

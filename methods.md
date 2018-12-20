@@ -151,9 +151,11 @@ And here it is by itself:
 ![Final data for Adereon](screenshots-and-images/figure-17.png)
 *Figure 17: Final data for Adereon*
 
-Now, admittedly, this data kind of looks like somebody took a bunch of small bites out of each continent. It missed some of the detail around the coasts, and looks way less organic than the following image that I digitized before trying this whole geoprocessing workflow:
+Now, admittedly, this data kind of looks like somebody took a bunch of small bites out of each continent. My workflow has a few drawbacks: it missed some of the detail around the coasts, it connected a few landmasses that shouldn't have been connected, and it looks way less organic than the following image that I digitized before trying this whole geoprocessing workflow:
 
 ![One of the continents, digitized by hand](screenshots-and-images/figure-18.png)
 *Figure 18: One of the continents, digitized by hand*
+
+All things considered, I probably could have done it by hand in half the time and had a better looking dataset -- but where's the fun in that?
 
 #Fin

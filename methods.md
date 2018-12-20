@@ -75,21 +75,39 @@ I distorted the original map a little bit in order to leave more space at the bo
 
 This is where things got a little hairy. Instead of manually digitizing all of the continents, I chose to "polygonize" my raster data, i.e., the georeferenced topo map of Adereon.
 
-#### Raster to Vector
+#### Vectorize the raster
 
 First, I ran the "Polygonize" tool, located in "Raster --> Conversion." It's part of the GDAL library and after quite a bit of troubleshooting I was able to get the tool to work.
 
 ![Vectorized map of Adereon](screenshots-and-images/figure-05.png)
 *Figure 05: Vectorized map of Adereon*
 
-Yikes -- this has a bunch of issues and I had my work cut out for me. In order to generate a vector polygon of continents with a clear boundary that was not composed of ugly right angles, my next step was to concatenate all of these messy records (there are over 100,000) into a single polygon. The Dissolve tool is good for this. I deleted the big background polygon, and after setting my geoprocessing preferences to "ignore features with invalid geometry," I ran the Dissolve tool.
+Yikes -- this has a bunch of issues and I had my work cut out for me. In order to generate a vector polygon of continents with a clear boundary that was not composed of ugly right angles, my next step was to concatenate all of these messy records (there are over 100,000) into a single polygon.
+
+#### Dissolve vectorized map
+
+The Dissolve tool is good for this. I deleted the big background polygon, and after setting my geoprocessing preferences to "ignore features with invalid geometry," I ran the Dissolve tool.
 
 ![Dissolved vectorized map of Adereon](screenshots-and-images/figure-06.png)
-*Figure 06: Dissolved vectorized map of Adereon
+*Figure 06: Dissolved vectorized map of Adereon*
 
+#### Create background and subtract difference
 
+You'll notice in Figure 06 that there are a bunch of empty spaces; the Dissolve tool overlooked a number of invalid geometries, which, in most cases, were located inside the new polygons. To infill that empty space, I first dissolved the quadrants polygon, which would serve as a vector background for the next step.
 
-####
+![Dissolved quadrants](screenshots-and-images/figure-07.png)
+*Figure 07: Dissolved quadrants*
 
+Next, I ran the Difference tool, using the dissolved vectorized output as an overlay.
+
+![Output of Difference tool with dissolved vectorized output](screenshots-and-images/figure-08.png)
+*Figure 08: Output of Difference tool with dissolved vectorized output*
+![Output of Difference tool without dissolved vectorized output](screenshots-and-images/figure-09.png)
+*Figure 09: Output of Difference tool without dissolved vectorized output*
+
+After deleting the big useless polygon on the outside, my new file looked like this:
+
+![Final output of Difference tool](screenshots-and-images/figure-10.png)
+*Figure 09: Final output of Difference tool*
 
 #Fin

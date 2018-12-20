@@ -108,6 +108,27 @@ Next, I ran the Difference tool, using the dissolved vectorized output as an ove
 After deleting the big useless polygon on the outside, my new file looked like this:
 
 ![Final output of Difference tool](screenshots-and-images/figure-10.png)
-*Figure 09: Final output of Difference tool*
+*Figure 10: Final output of Difference tool*
+
+#### Union and Dissolve
+
+Together, these new files created the polygonal infill I needed:
+
+![Difference plus dissolved vectorized output](screenshots-and-images/figure-11.png)
+*Figure 11: Difference plus dissolved vectorized output*
+
+The Union tool joined them up nicely, into a single file:
+
+![Output of Union tool](screenshots-and-images/figure-12.png)
+*Figure 12: Output of Union tool*
+
+Unfortunately, there are some donut holes, but those will be fixed as a byproduct of the next step.
+
+#### Smoothing through buffer-debuffer
+
+At first glance this output looks nice -- much better at least than the original vectorization -- but upon closer inspection it still has the pesky right angles along the boundary.
+
+![Pesky right angles](screenshots-and-images/figure-13.png)
+*Figure 09: Pesky right angles*
 
 #Fin

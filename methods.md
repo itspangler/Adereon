@@ -32,7 +32,11 @@ I suppose what I am doing, then, could be considered [selenographic mapping](htt
 
 ## Data Creation
 
-With a coordinate reference system selected, the next step was data creation. Here, I break down my process of data creation in a few steps.
+With a coordinate reference system selected, the next order of business was data creation. Here, I break down my process of data creation in a few different components.
+
+* I began with contextualizing the data, by which I mean I downloaded some other lunar data to create a map extent and get myself situated.
+* Next, referring to instructions from Lab 6, I georeferenced the scanned map of Adereon.
+* Finally, I did a little bit of geoprocessing (a combination of raster and vector tools) in order to save myself some time on the manual labor of drawing the continents. As it happens, this did not save me any time at all but was an interesting rabbit hole. In the following sections I'll break down each of these data creation steps.
 
 ### Contextualizing
 
@@ -43,11 +47,11 @@ The original "data" is shown below: three continents, some islands, forests and 
 
 It's just a scanned and hand drawn map of an imaginary region, but we might think of this data in the same way we would treat an old map whose entire extent needed to be digitized.
 
-The data I am creating does not need to be perfect; indeed, it's a dataset of imaginary topographies, so no harm done if it's a few miles off. Nate and I had agreed that the western continent was roughly equivalent to Nebraska in length. For the sake of simplicity, I treated the original map in Figure 01 as 1,000 miles across from end to end (I figured that would approximate the western continent at 430 miles, give or take). But before blindly importing it to QGIS for georeferencing, I needed to find a spatial reference.
+The data I am creating does not need to be perfect; indeed, it's a dataset of imaginary topographies, so no harm done if it's a few miles off. Nate and I had agreed that the western continent was roughly equivalent to Nebraska in length.
 
-In order to properly georeference the scanned map of Adereon with the, I downloaded some shapefiles of different features on Earth's moon from the [Lunar Reconnaissance Orbiter Camera](http://lroc.sese.asu.edu/about) (LROC) to use as a comparison. (Washington University in St. Louis's [Lunar Orbital Data Explorer](https://ode.rsl.wustl.edu/mars/coverage/ODE_Moon_shapefile.html) also has interesting lunar data, but it was much less useful for my purposes.) Specifically, I downloaded the the line feature [Wrinkle Ridges](http://wms.lroc.asu.edu/lroc/view_rdr/SHAPEFILE_WRINKLE_RIDGES) point feature [Anthropogenic Objects](http://wms.lroc.asu.edu/lroc/view_rdr/SHAPEFILE_ANTHROPOGENIC_OBJECTS). Wrinkle Ridges covered most of the lunar territory, providing a full scope of the space I was working with, while Anthropogenic Objects provided a set of clear spatial referents that would become essential for georeferencing. Figure 02 shows the two sets of lunar data loaded in QGIS in the IAU Moon 2000 Geographic Coordinate System. This was also helpful to generally contextualize what the area looked like.
+In order to properly georeference the scanned map of Adereon, I downloaded some files of different features on Earth's moon from the [Lunar Reconnaissance Orbiter Camera](http://lroc.sese.asu.edu/about) (LROC) to use as a comparison. (Washington University in St. Louis's [Lunar Orbital Data Explorer](https://ode.rsl.wustl.edu/mars/coverage/ODE_Moon_shapefile.html) also has interesting lunar data, but it was much less useful for my purposes.) Specifically, I downloaded a [Wrinkle Ridges](http://wms.lroc.asu.edu/lroc/view_rdr/SHAPEFILE_WRINKLE_RIDGES) point feature [Anthropogenic Objects](http://wms.lroc.asu.edu/lroc/view_rdr/SHAPEFILE_ANTHROPOGENIC_OBJECTS). Wrinkle Ridges covered most of the lunar territory, providing a full scope of the space I was working with, while Anthropogenic Objects provided a set of clear spatial referents that would become essential for georeferencing. Figure 02 shows the two sets of lunar data loaded in QGIS in the IAU Moon 2000 Geographic Coordinate System. This was also helpful to generally contextualize what the area looked like.
 
-![Moon data in QGIS](screenshots-and-images/figure-02.png)
+![Moon background in QGIS](screenshots-and-images/figure-02.png)
 *Figure 02: Moon data in QGIS*
 
 After playing around with the measuring tool, I found two objects that were about 1,000 miles from one another: "Luna 17" and "Luna 21." I filtered for them and found a new extent, which would ultimately become the extent for Adereon.

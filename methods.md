@@ -1,4 +1,4 @@
-# The Continents of Adereon: Methods for Creating a Fantasy Map
+# The Continents of Adereon: Methods for Fantasy Mapping
 
 ## Table of Contents
 
@@ -128,14 +128,22 @@ After a quick Dissolve, the internal borders are gone and we have a vector file 
 
 *Figure 13: Dissolve from Difference output*
 
-Unfortunately, there are some donut holes, but those will be fixed as a byproduct of the next step.
-
 #### Smoothing through buffer-debuffer
 
-At first glance this output looks nice -- much better at least than the original vectorization -- but upon closer inspection it still has the pesky right angles along the boundary.
+At first glance this new output looks nice -- much better at least than the original vectorization -- but upon closer inspection it still has the pesky right angles along the boundary.
 
 ![Pesky right angles](screenshots-and-images/figure-14.png)
 
 *Figure 14: Pesky right angles*
+
+I installed the "Cartographic Line Generalization" plugin but couldn't get it to work properly, so in order to smooth the rough edges of this new file I used a buffer-debuffer technique. Basically, this just means I ran a Buffer tool twice: first, I ran a Buffer with a distance of 1 to soften/smooth the edges, and second, I ran a Buffer with a distance of -1 to reduce the size. Below is the smaller (second) buffer overlaid on the larger (first) buffer:
+
+![Result of buffer-debuffer technique](screenshots-and-images/figure-15.png)
+*Figure 15: Result of buffer-debuffer technique*
+
+When set beneath the original topo map, this doesn't look too bad!
+
+![New data beneath original topo map](screenshots-and-images/figure-16.png)
+*Figure 16: New data beneath original topo map*
 
 #Fin

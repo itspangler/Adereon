@@ -1,1 +1,198 @@
-#web map for adereon
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset=utf-8 />
+  <title>The Known Lands of Adereon</title>
+  <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css" />
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #d3d3d3;
+      font-family: 'Avenir', sans-serif;
+      font-weight: 400;
+      color: #3d3d3d;
+    }
+
+    section {
+      width: 80%;
+      margin: 10px auto;
+    }
+
+    h1 {
+      font-family: 'Avenir', sans-serif;
+      font-weight: 300;
+      font-size: 2.5vw;
+      /* The vw unit. 2.5x the current size */
+      letter-spacing: .04vw;
+      text-transform: uppercase;
+    }
+
+    h2 {
+      font-family: 'Avenir', sans-serif;
+      font-weight: 300;
+      color: gray;
+      font-size: 1.5vw;
+      letter-spacing: .04vw;
+    }
+
+    p {
+      font-size: 1.25vw;
+      line-height: 1.5vw;
+    }
+
+    a {
+      color: #005daa;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    li {
+      margin: 10px 0
+    }
+
+    #map {
+      width: 100%;
+      margin: 0px auto;
+
+    }
+
+    .max-image-width {
+      width: 100%;
+    }
+
+
+    .linkbox {
+      margin: 3px 0 20px 0;
+      display: block;
+      font-weight: 300;
+    }
+
+    hr {
+      border: 0px;
+      border-bottom: 1px solid #3d3d3d;
+      padding-top: 20px;
+    }
+
+    /* Use float property to make two-column layout. */
+
+    .first-column {
+      float: left;
+      width: 48%;
+      padding-right: 20px;
+    }
+
+    .column {
+      float: left;
+      width: 48%;
+    }
+
+    /* Clear floats after the columns */
+
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    /* When browser is 800px wide or less */
+
+    @media screen and (max-width: 800px) {
+      .first-column,
+      .column {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Add map to top of page and make it stretch to fill browser window. -->
+  <img class="max-image-width" src="final_map1200px.png">
+
+  <!-- Create a two column layout for map information. -->
+  <section>
+    <a href='final_map8000px.png' target=blank class="linkbox">Full screen version</a>
+
+    <h1><span style="font-weight:bold">Play-Eat-Walk Local! in Richmond, VA:
+    <br>The Proximity of Cafes and Restaurants to Parks</h1></span>
+    <h2>By Ian Spangler</h2>
+
+    <div class="row">
+
+      <!-- First column, the left half -->
+      <div class="first-column">
+        <p>Richmond, the capital city of Virginia, seems to become more popular with each passing
+          year. Its frequent placement on "Top 10" listicles, as well as a recent proliferation of restaurants
+          and breweries, certainly suggests that it has something to offer. But how do such amenities fare when
+          analyzed in relation to other desirable urban features – for example, parks? The above map attempts to answer
+          the question how accessible different cafes and restaurants are based on their distance from parks in Richmond,
+          VA, and the following points were considered during analysis.</p>
+        <p>RVA is no stranger to public green space – there are nearly 100 parks in the city, many of which are tiny triangle parks.
+          As such, for this analysis, only parks larger than 1 acre (43,560 sq ft) were selected. Additionally,
+          while The Institute of Environmental Recreation initially requested amenities within one mile of parks,
+          Richmond's parks proved abundant enough to reduce that distance by half (2,640 ft). Half a mile might seem
+          too small, but when set at 1 full mile, the buffers covered nearly the whole city! In conducting the actual analysis,
+          a buffer of 2,640 ft was created on all parks within the City of Richmond's
+          formal boundary, resulting in 48 buffers on different parks (see Figure 1). This buffer was used to select
+          cafes and restaurants within 1/2 mile of a park.</p>
+        <p>In examining these maps, we can discern a few points about the accessibility of amenities to parks in RVA.
+          First, there are significant clusters of cafes and restaurants on the Cary/Main Street corridor and along Broad Street (see Figure 2).
+          This is unsurprising, considering that those are both hotspots of gentrification as well as collegiate activity for students
+          of Virginia Commonwealth University. Perhaps a more interesting observation is that there are functionally no park-accessible
+          amenities south of the (just heinously symbolized) James River. But this analysis has many more limitations than it does illuminations. For one, mere Euclidean distance is not sufficient to analyze accessibility.
+          A more sophisticated cost-distance analysis that considered how walkable an amenity is, rather than it's distance from
+          a park as the crow flies, would help to better answer The Institute's question. Additionally, the classifications downloaded
+          from OpenStreetMap need more examination to confirm that they are indeed the kinds of "cafes" or "restaurants" that the Play-Eat-Walk Local!
+          initiative is interested in identifying. For example, while this analysis considered Dunkin' Donuts and McDonald's cafes and restaurants,
+          it remains unclear whether those are the kinds of establishments that would be considered "local." Finally, the map is relatively misleading:
+          <span style="font-weight:bold">while it does indeed show us that there are a total of 90 cafes or restaurants within 1/2 mile walking distance of parks in the city, it
+          neglects to mention that there were only 99 such amenities in the city to begin with!</span> Put another way, the buffers did nearly nothing at all in terms of
+          differentiating an amenity that was park-accessible from one that simply existed. If anybody still wants to check out the GeoJSON, though,
+          <a href="cafe_restaurants_incity.geojson" target=blank>they can find it here</a>.</p>
+      </div>
+
+      <!-- Second column, the right half -->
+      <div class="column">
+        <!-- Challenge map -->
+        <img class="max-image-width" src="buffer_figure.png">
+        <p class="linkbox"> <span style="font-weight:bold">Figure 1:</span> This map represents 48 overlapping buffer zones, each extending
+        1/2 mile from selected parks in the city.</p>
+
+        <!-- Challenge photograph -->
+        <img class="max-image-width" src="zoom_amenities.png">
+        <p class="linkbox"> <span style="font-weight:bold">Figure 2:</span> This map, scaled at 1:10,000, offers a more granular
+        view of the cafes and restaurants that line Cary and Main Streets. <a href="doublezoom_amenities.png" target=blank>Follow this link</a> to a full size image.</p>
+
+      </div>
+    </div>
+
+    <h3>Map details</h3>
+    <p>This map was made using QGIS 3.4 on a MacOS 10.13.1 (a machine which the author of the map needs to update). It is projected in
+    EPSG:3986 - NAD 83/Virginia Lambert. </p>
+
+    <p>
+      University of Kentucky New Maps Plus, Fall 2018.
+    </p>
+    <hr>
+    <ul>
+      <li>Follow me on twitter <a href="https://twitter.com/">@itspangler</a></li> <!-- or any other social media site -->
+      <li>Visit my Github account <a href='https://github.com'>@itspangler</a> </li>
+      <li><a href="https://newmapsplus.github.io">New Maps Plus</a></li>
+    </ul>
+  </section>
+
+</body>
+</html>

@@ -76,11 +76,11 @@ Replicating the instructions from Lesson 6 made this section rather simple. The 
 ![Georeferenced Adereon topo map](screenshots-and-images/figure-04.png)
 *Figure 04: Georeferenced Adereon topo map*
 
-I distorted the original map a little bit in order to leave more space at the bottom for future world building stuff.
+I slightly distorted the original map in order to leave more space at the bottom for future world building stuff.
 
 ### Geoprocessing
 
-This is where things got a little hairy. Instead of manually digitizing all of the continents, I chose to "polygonize" my raster data, i.e., the georeferenced topo map of Adereon.
+This is where things got a little hairy. Instead of manually digitizing all of the continents, I thought it would be an interesting experiment to automate the workflow. The following section details my attempt to do so, and explains the raster/vector tools I utilized.
 
 #### Vectorize the raster
 
@@ -165,7 +165,7 @@ Now, admittedly, this data kind of looks like somebody took a bunch of small bit
 
 All things considered, I definitely could have done this by hand in half the time and had a better looking dataset, but I was curious about what an automated workflow would look like for this.
 
-I ended up deciding that the automated workflow was too far off from the original and just did it by hand anyway.
+And I ended up deciding that the automated workflow was too far off from the original and just did it by hand anyway.
 
 ![Final continent boundaries](screenshots-and-images/figure-19.png)
 *Figure 19: Final continent boundaries*

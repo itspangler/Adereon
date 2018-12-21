@@ -182,11 +182,17 @@ This time I added 62 points in the georeferencer, the results of which are below
 
 And here are the results of the digitized state boundaries:
 
-![Georeferenced political map](screenshots-and-images/figure-22.png)
-*Figure 22: Georeferenced political map*
+![Final country boundaries](screenshots-and-images/figure-22.png)
+*Figure 22: Final country boundaries*
 
 ## Conclusion and Reflection
 
 While I enjoyed working on this project and hope to add to the map as Nate continues world-building, there are a lot of things that I feel could still be improved. For one, Nate drew in a few mountain ranges that I wasn't able to represent on the map I made. I ran into issues with the GeoJSON file format, specifically when using the multipolygon to single polygon tool, and had to start using shapefiles. I didn't load things into PostGIS, which probably would have simplified a lot. I also had issues in the print layout GUI with changing fonts (a documented issue on Mac), which is why I used a combination of fonts on the map itself.
 
-Overall, however, I'm pleased with how it turned out.
+Overall, however, I'm pleased with how it turned out:
+
+![Georeferenced political map](screenshots-and-images/figure-23.png)
+*Figure 23: Final map*
+
+![Georeferenced political map](screenshots-and-images/figure-24.png)
+*Figure 24: Final map overlaid by Nate's original map*

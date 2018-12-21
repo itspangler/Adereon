@@ -163,7 +163,7 @@ Now, admittedly, this data kind of looks like somebody took a bunch of small bit
 
 All things considered, I definitely could have done this by hand in half the time and had a better looking dataset, but I was curious about what an automated workflow would look like for this.
 
-And I ended up deciding that the automated workflow output's boundaries were too far off from the original and just did it by hand anyway.
+Unfortunately, I ended up deciding that the automated workflow output's boundaries were too far off from the original and just did it by hand anyway...
 
 ![Final continent boundaries](screenshots-and-images/figure-19.png)
 *Figure 19: Final continent boundaries*
@@ -187,7 +187,7 @@ And here are the results of the digitized state boundaries:
 
 ## Conclusion and Reflection
 
-While I enjoyed working on this project and hope to add to the map as Nate continues world-building, there are a lot of things that I feel could still be improved. For one, Nate drew in a few mountain ranges that I wasn't able to represent on the map I made. I ran into issues with the GeoJSON file format, specifically when using the multipolygon to single polygon tool, and had to start using shapefiles. I didn't load things into PostGIS, which probably would have simplified a lot. I also had issues in the print layout GUI with changing fonts (a documented issue on Mac), which is why I used a combination of fonts on the map itself.
+While I enjoyed working on this project and hope to add to the map as Nate continues world-building, there are a lot of things that I feel could still be improved. For one, Nate drew in a few mountain ranges that I wasn't able to represent on the map I made. I ran into issues with the GeoJSON file format, specifically when using the multipolygon to single polygon tool, and had to start using shapefiles. I didn't load things into PostGIS, which probably would have simplified a lot. I couldn't get all of the country labels to display, and I also had issues in the print layout GUI with changing fonts (a documented issue on Mac), which is why I used a combination of fonts on the map itself.
 
 Overall, however, I'm pleased with how it turned out:
 

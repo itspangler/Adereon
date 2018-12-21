@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset=utf-8 />
+  <title>Adereon</title>
+  <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css" />
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #ffffed;
+      font-family: 'Century', sans-serif;
+      font-weight: 400;
+      color: #3d3d3d;
+    }
+
+		   section {
+      width: 80%;
+      margin: 10px auto;
+    }
+
+    h1 {
+      font-family: 'Century', sans-serif;
+      font-weight: 200;
+      font-size: 3.5vw;
+      /* The em unit. 2.5x the current size */
+      letter-spacing: .7vw;
+      text-transform: uppercase;
+      text-shadow: 5px 2px 4px #ababab;
+    }
+
+    h2 {
+      font-family: 'Century', sans-serif;
+      font-weight: 200;
+      color: #3d3d3d;
+      font-size: 2vw;
+      letter-spacing: .04vw;
+      text-shadow: 2px 4px 4px #ababab;
+    }
+
+    h3 {
+      font-family: 'Helvetica Neue', sans-serif;
+      font-weight: 200;
+      color: gray;
+      font-size: 1.5vw;
+      letter-spacing: .04vw;
+    }
+
+    p {
+      font-size: 1.25vw;
+      line-height: 1.5vw;
+    }
+
+    a {
+      color: #005daa;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    li {
+      margin: 10px 0
+    }
+
+    #map {
+      width: 100%;
+      margin: 0px auto;
+
+    }
+
+    .max-image-width {
+      width: 100%;
+    }
+
+
+    .linkbox {
+      margin: 3px 0 20px 0;
+      display: block;
+      font-weight: 300;
+    }
+
+    hr {
+      border: 0px;
+      border-bottom: 1px solid #3d3d3d;
+      padding-top: 20px;
+    }
+
+    /* Use float property to make two-column layout. */
+
+    .first-column {
+      float: left;
+      width: 48%;
+      padding-right: 20px;
+    }
+
+    .column {
+      float: left;
+      width: 48%;
+    }
+
+    /* Clear floats after the columns */
+
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    /* When browser is 800px wide or less */
+
+    @media screen and (max-width: 800px) {
+      .first-column,
+      .column {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Add map to top of page and make it stretch to fill browser window. -->
+  <img class="max-image-width" src="adereon-map-1200px.png"=>
+
+  <!-- Create a two column layout for map information. -->
+  <section>
+    <br><a href='adereon-map-8000px.png' class="linkbox" target=blank>Click here for full screen map</a>
+
+    <h1>Mapping Adereon: A Fantasy Cartography Project</h1>
+    <h2>By Ian Spangler</h2>
+
+    <div class="row">
+
+      <!-- First column, the left half -->
+      <div class="first-column">
+        <p>The known landmasses of Adereon have never been mapped – until now.
+        <br><p>Over the past two years, I have been playing quite a bit of Dungeons & Dragons
+					My friend Nate is in the process of homebrewing his own universe, and I thought it
+					would be a fun exercise to digitize the maps that he had drawn (see Figure 1).
+        <br><p>The above map represents the cartographic fruits of my labor. Making this map involved
+					three steps, more or less: 1) choosing a coordinate system and projection; 2) georeferencing;
+					and 3) digitizing. I chose to project this data on to the moon, because that was a closer approximation
+					of the globe that Nate envisioned than our Earth is. Nate provided me with two maps – one of topographic
+					features and one of political boundaries – which I had to georeference with one another. Digitizing was
+					straightforward but arduous. I spent far more time trying to design a workflow for vectorizing the
+					hand-drawn maps that Nate provided, and it worked but not well (that process is detailed in my methodology below).
+        <br><p>The total contents of the map include a few forests, some rivers, and the countries &
+					continents of Adereon (which is the name of this imaginary world). While Nate included mountains
+					on his original map, I had trouble representing them cartographically without generating a raster, and
+					that was beyond the scope of this project.
+        <br><p>I had a vision for this project that was much larger than I could actually carry out. I wanted to
+					complete three other things: 1) create a flow map using the QGIS Flow Mapper plugin of political alliances, 2)
+					digitize data for a city, and 3) publish this as a slippy map that could be explored, zoomed into, and scrolled throug. Still, in the course
+					of this project I created the rough, first draft of a dataset that can be revisited and continously updated
+					as my D&D group explores this territory. In the future, I'll hopefully be completing those updates as I'm able,
+					and adding other bits of infill such as roads, mountains, and more detailed rivers.
+				<br><p>Thanks for reading!
+      	<br><p><i>A detailed account of the methodology, including my failed attempt at automating the workflow, can be found <a href="" target=blank>here</a>.</i></p>
+      </div>
+
+      <!-- Second column, the right half -->
+      <div class="column">
+        <!-- Challenge map -->
+        <img class="max-image-width" src="adereon-topo-map.jpg">
+        <p class="linkbox">Figure 1: This is the original map of Adereon, drawn by my friend Nate.
+				Note the differences in size, which I changed during the georeferencing process.</p>
+
+        <!-- Challenge photograph -->
+        <img class="max-image-width" src="adereon-demo-1200px.png">
+        <p class="linkbox">Figure 2: This shows the georeferences version of Nate's map overlaid option
+				the map I created in QGIS. In some ways I prefer this version, for its blend of physical and digital cartography. A higher resolution image can be found <a href="adereon-demo-1200px.png" target="blank">here</a>.</p>
+
+      </div>
+    </div>
+    <hr>
+    <h3>How was this map made?</h3>
+      This map was made in QGIS 3.4 on MacOS 10.13.1. It is projected in IAU2000:301000.
+			It utilized data from the <a href='https://webgis.wr.usgs.gov/pigwad/down/moon_dl.htm'>USGS
+			Lunar GIS FTP site</a>, and my friend Nate's imagination.
+
+    <p>
+      <strong>University of Kentucky New Maps Plus, Fall 2018.</strong>
+    </p>
+    <hr>
+    <ul>
+      <li>Follow me on twitter <a href="https://twitter.com/itspangler">@itspangler</a></li> <!-- or any other social media site -->
+      <li>Visit my Github account <a href='https://github.com/itspangler'>@itspangler</a> </li>
+      <li><a href="https://newmapsplus.github.io">New Maps Plus</a></li>
+    </ul>
+  </section>
+
+</body>
+</html>

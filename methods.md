@@ -18,13 +18,11 @@
       - [Union and Dissolve](#union-and-dissolve)
       - [Smoothing through buffer-debuffer](#smoothing-through-buffer-debuffer)
     - [Georeferencing II: The More Difficult One](#georeferencing-ii-the-more-difficult-one)
-
+  - [Conclusion and Reflection](#conclusion-and-reflection)
 
 <!-- /TOC -->
 
 ## Overview
-
-The landmasses in the known world of Adereon have, to this day, never been mapped in a geographic information system.
 
 In this document, I'll detail some of the key considerations and techniques that went into making a spatial database -- and a few maps to go along with it -- of my friend Nate's homebrewed Dungeons & Dragons universe.
 
@@ -189,4 +187,8 @@ This time I added 62 points in the georeferencer, the results of which are below
 ![Georeferenced political map](screenshots-and-images/figure-22.png)
 *Figure 22: Georeferenced political map*
 
-#Fin
+## Conclusion and Reflection
+
+While I enjoyed working on this project and hope to add to the map as Nate continues world-building, there are a lot of things that I feel could still be improved. For one, Nate drew in a few mountain ranges that I wasn't able to represent on the map I made. I ran into issues with the GeoJSON file format, specifically when using the multipolygon to single polygon tool, and had to start using shapefiles. I didn't load things into PostGIS, which probably would have simplified a lot. I also had issues in the print layout GUI with changing fonts (a documented issue on Mac), which is why I used a combination of fonts on the map itself.
+
+Overall, however, I'm pleased with how it turned out. 

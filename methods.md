@@ -163,26 +163,24 @@ Now, admittedly, this data kind of looks like somebody took a bunch of small bit
 
 All things considered, I definitely could have done this by hand in half the time and had a better looking dataset, but I was curious about what an automated workflow would look like for this.
 
-And I ended up deciding that the automated workflow was too far off from the original and just did it by hand anyway.
+And I ended up deciding that the automated workflow output's boundaries were too far off from the original and just did it by hand anyway.
 
 ![Final continent boundaries](screenshots-and-images/figure-19.png)
 *Figure 19: Final continent boundaries*
 
-#### New Feature and Attribute Creation
-
-This section doesn't need much explanation, but it did take a bit of time. I went in and manually digitized/created attributes for the features Nate had drawn on the topo map. The result is below:
-
-![Final continent boundaries](screenshots-and-images/figure-20.png)
-*Figure 20: Final continent boundaries*
-
 ### Georeferencing II: The More Difficult One
 
-Now that the topo map had been completely created, I needed to overlay the political map he had drawn. This map includes states boundaries and capital cities, and while it was the same original dimensions as Nate's topo map, it is hand drawn so the boundaries do not exactly align (plus, like I indicated before, I stretched the map a bit east and west to leave more space on the bottom of the extent).
+Now that a set of boundaries had been completely created, I needed to overlay the political map that Nate had drawn. This map includes states boundaries, and while it was the same original dimensions as Nate's topo map, it is hand drawn so the boundaries do not exactly align (plus, like I indicated before, I stretched the map a bit east and west to leave more space on the bottom of the extent).
 
 This time I added 62 points in the georeferencer, the results of which are below:
 
-![Georeferencing points for political map overlaid on topo](screenshots-and-images/figure-21.png)
-*Figure 21: Georeferencing points for political map overlaid on topo*
+![Georeferencing points for political map overlaid on topo](screenshots-and-images/figure-20.png)
+*Figure 20: Georeferencing points for political map overlaid on topo*
+
+![Georeferenced political map](screenshots-and-images/figure-21.png)
+*Figure 21: Georeferenced political map*
+
+And here are the results of the digitized state boundaries:
 
 ![Georeferenced political map](screenshots-and-images/figure-22.png)
 *Figure 22: Georeferenced political map*
@@ -191,4 +189,4 @@ This time I added 62 points in the georeferencer, the results of which are below
 
 While I enjoyed working on this project and hope to add to the map as Nate continues world-building, there are a lot of things that I feel could still be improved. For one, Nate drew in a few mountain ranges that I wasn't able to represent on the map I made. I ran into issues with the GeoJSON file format, specifically when using the multipolygon to single polygon tool, and had to start using shapefiles. I didn't load things into PostGIS, which probably would have simplified a lot. I also had issues in the print layout GUI with changing fonts (a documented issue on Mac), which is why I used a combination of fonts on the map itself.
 
-Overall, however, I'm pleased with how it turned out. 
+Overall, however, I'm pleased with how it turned out.

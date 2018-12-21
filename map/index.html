@@ -143,38 +143,29 @@
 
       <!-- First column, the left half -->
       <div class="first-column">
-        <p>LOCALES ACROSS North America are experiencing what seems to be a <b>revolution in
-          craft beer</b>. To date, there are over 7,000 scattered across the continent,
-          including Hawaii.
-        <br><p>EVEN COMPANIES who don't make beer have been caught up in this transnational
-          brew-craze. <b>Aztec Aquaponics</b>, a small company based out of Albuquerque,
-          specializes in using beer brewing byproducts for their aquaponic operations.
-          Their produce, sustainable fish and lettuce greens, supply an artisan fast-casual
-          national restaurant chain.
-        <br><p>THE ABOVE MAP was commissioned for Aztec in order to assist with their current
-          site-selection for a new location.
-          In addition to locating a <b>high-density area of breweries</b> to maximize their
-          aquaponic production,
-          their supply chain requires that they <b>cannot transport the brewery byproducts
-          more than 25 km</b>.
-        <br><p>WHERE should they locate? <b>Hex binning</b> brewery locations in North
-          America and Hawaii offers a potential answer.
-          Hex binning is a technique of spatial analysis that involves creating an array of
-          equally-sized hexagons that measure the density of a phenomena.
-          While I hope that this analysis benefits Aztec, it might also be of use to discerning
-          beer drinkers and craft enthusiasists across the continent
-          as they decide where they might settle down.
-        <br><p>ALL TOLD – and setting aside the bursting of any craft beer bubbles, so to speak – Aztec
-          is in a good position to select a new location.
-          <b>Coastal regions appear the most promising</b> when it comes to craft beer proximity.
-          The greater Seattle, San Francisco, and San Diego regions would be successful on the
-          Pacific Coast, while Boston, Washington DC, and Jersey City all share a high alcohol
-          content on the eastern seaboard.
-          Looking in between, Denver, Chicago, and St. Louis also prove likely candidates.
-          However, more granular analysis is necessary to determine anything past these
-          preliminary suggestions.
-        <br><br><br><br><p><i>A GeoJSON file of the hex grid, which includes a field for total breweries
-          in each hexagon, can be found <a href="../geojson/brew_hex.geojson" target=blank>here</a>.</i></p>
+        <p>The known landmasses of Adereon have never been mapped – until now.
+        <br><p>Over the past two years, I have been playing quite a bit of Dungeons & Dragons
+					My friend Nate is in the process of homebrewing his own universe, and I thought it
+					would be a fun exercise to digitize the maps that he had drawn (see Figure 1).
+        <br><p>The above map represents the cartographic fruits of my labor. Making this map involved
+					three steps, more or less: 1) choosing a coordinate system and projection; 2) georeferencing;
+					and 3) digitizing. I chose to project this data on to the moon, because that was a closer approximation
+					of the globe that Nate envisioned than our Earth is. Nate provided me with two maps – one of topographic
+					features and one of political boundaries – which I had to georeference with one another. Digitizing was
+					straightforward but arduous. I spent far more time trying to design a workflow for vectorizing the
+					hand-drawn maps that Nate provided, and it worked but not well (that process is detailed in my methodology below).
+        <br><p>The total contents of the map include a few forests, some rivers, and the countries &
+					continents of Adereon (which is the name of this imaginary world). While Nate included mountains
+					on his original map, I had trouble representing them cartographically without generating a raster, and
+					that was beyond the scope of this project.
+        <br><p>I had a vision for this project that was much larger than I could actually carry out. I wanted to
+					complete three other things: 1) create a flow map using the QGIS Flow Mapper plugin of political alliances, 2)
+					digitize data for a city, and 3) publish this as a slippy map that could be explored, zoomed into, and scrolled throug. Still, in the course
+					of this project I created the rough, first draft of a dataset that can be revisited and continously updated
+					as my D&D group explores this territory. In the future, I'll hopefully be completing those updates as I'm able,
+					and adding other bits of infill such as roads, mountains, and more detailed rivers.
+				<br><p>Thanks for reading!
+      	<br><p><i>A detailed account of the methodology, including my failed attempt at automating the workflow, can be found <a href="" target=blank>here</a>.</i></p>
       </div>
 
       <!-- Second column, the right half -->
@@ -193,7 +184,9 @@
     </div>
     <hr>
     <h3>How was this map made?</h3>
-      This map was made in QGIS 3.4 on MacOS 10.13.1.
+      This map was made in QGIS 3.4 on MacOS 10.13.1. It is projected in IAU2000:301000.
+			It utilized data from the <a href='https://webgis.wr.usgs.gov/pigwad/down/moon_dl.htm'>USGS
+			Lunar GIS FTP site</a>, and my friend Nate's imagination.
 
     <p>
       <strong>University of Kentucky New Maps Plus, Fall 2018.</strong>
